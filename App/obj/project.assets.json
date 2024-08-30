@@ -4872,19 +4872,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/enigma/.nuget/packages/": {}
+    "/Users/aleksandrbaskin/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/enigma/RiderProjects/NightCinemaBot/App/App.csproj",
+      "projectUniqueName": "/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/App.csproj",
       "projectName": "App",
-      "projectPath": "/Users/enigma/RiderProjects/NightCinemaBot/App/App.csproj",
-      "packagesPath": "/Users/enigma/.nuget/packages/",
-      "outputPath": "/Users/enigma/RiderProjects/NightCinemaBot/App/obj/",
+      "projectPath": "/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/App.csproj",
+      "packagesPath": "/Users/aleksandrbaskin/.nuget/packages/",
+      "outputPath": "/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/enigma/.nuget/NuGet/NuGet.Config"
+        "/Users/aleksandrbaskin/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4941,7 +4941,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100-preview.3.23178.7/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
