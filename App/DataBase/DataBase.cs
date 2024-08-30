@@ -148,8 +148,9 @@ public class DataBase {
     }
     
     public void Load() {
-        if (File.Exists("/Users/enigma/RiderProjects/NightCinemaBot/App/Saves/saves.json")) {
-            using (StreamReader file = File.OpenText("/Users/enigma/RiderProjects/NightCinemaBot/App/Saves/saves.json"))
+        Console.WriteLine(GetSavesPath());
+        if (File.Exists(GetSavesPath())) {
+            using (StreamReader file = File.OpenText(GetSavesPath()))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 content = (Data)serializer.Deserialize(file, typeof(Data)) ?? new Data();
@@ -162,7 +163,7 @@ public class DataBase {
     private void Save() {
         content.durationBetweenNightCinema = DateTime.Now - content.lastNightCinemaDate;
         string json = JsonConvert.SerializeObject(content, Formatting.Indented);
-        using (StreamWriter file = File.CreateText("/Users/enigma/RiderProjects/NightCinemaBot/App/Saves/saves.json"))
+        using (StreamWriter file = File.CreateText(GetSavesPath()))
         {
             JsonSerializer serializer = new JsonSerializer();
             var options = new JsonSerializerOptions { WriteIndented = true };
@@ -175,5 +176,16 @@ public class DataBase {
     public void SetLastPollId(Poll updatePoll) {
         content.lastPollId.Poll = updatePoll;
         Save();
+    }
+
+    private string GetSavesPath() {
+        // Относительный путь к файлу
+        string relativePath = "DataBase/Saves/saves.json";
+        
+        // Относительный путь для подъема на 3 директории вверх и перехода в папку Saves
+        string relativeDir = Path.Combine("..", "..", "..");
+        
+        // Комбинируем текущий каталог с относительным путем
+        return Path.Combine(Path.GetFullPath(relativeDir), relativePath);
     }
 }

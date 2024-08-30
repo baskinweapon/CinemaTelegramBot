@@ -97,15 +97,13 @@ class Aplication {
         // var teaCeremony = new TeaCeremony();
         // teaCeremony.GetTea();
         string str = $"Dev Testing CI/CD";
-
-        await TelegramProvider.Instance.bot.SendTextMessageAsync(
-            DataBase.Instance.GetMainChatId(),
-            str,
-            cancellationToken: new CancellationTokenSource().Token);
-        
         
         Update();
-        
+
+        // await TelegramProvider.Instance.bot.SendTextMessageAsync(
+        //     DataBase.Instance.GetMainChatId(),
+        //     str,
+        //     cancellationToken: new CancellationTokenSource().Token);
         
         await TelegramProvider.Instance.Init();
     }

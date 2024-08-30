@@ -1,0 +1,11 @@
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/win-x86/publish/App.exe
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/win-x86/publish/App.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/win-x86/publish/App.deps.json
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/win-x86/publish/App.runtimeconfig.json
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/win-x86/publish/App.pdb
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/win-x86/publish/AngleSharp.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/win-x86/publish/HtmlAgilityPack.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/win-x86/publish/Newtonsoft.Json.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/win-x86/publish/Telegram.Bot.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/win-x86/publish/libvideo.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/win-x86/publish/YoutubeExplode.dll

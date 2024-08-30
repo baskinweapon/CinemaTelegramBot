@@ -1,6 +1,6 @@
 {
   "lastNightCinemaDate": "0001-01-01T00:00:00",
-  "durationBetweenNightCinema": "738907.12:48:01.5107070",
+  "durationBetweenNightCinema": "739127.16:44:40.6391840",
   "sizeOfNightCinemaSessions": 0,
   "movieMessageIdDictionary": {
     "687": [
@@ -174,6 +174,10 @@
     "573": [
       "<strong>Холодная гора</strong>\n\nКровавый период Гражданской войны в США: американский конфедерат Инман пытается добраться с линии фронта домой, в Холодную Гору (штат Северная Каролина), где оставил свою возлюбленную Аду.\n\nАда пытается выжить одна в разоренном тылу. На помощь ей приходит бродяжка Руби, которая учит светскую барышню азам ведения хозяйства... \n",
       "<strong>Жанр:</strong> драма\n<strong>Режиссер:</strong> Энтони Мингелла\n<strong>Cтрана:</strong> США\n<strong>Год:</strong> 2003\n<strong>Рейтинг:</strong> 7.8\n<strong>Актеры:</strong> Энтони Мингелла, Джуд Лоу, Николь Кидман, Рене Зеллвегер, Брендан Глисон, Рэй Уинстон, Кэти Бейкер\n<strong>Длительность:</strong> 148\n"
+    ],
+    "618": [
+      "<strong>Мачо и ботан</strong>\n\nШмидт и Дженко люто ненавидели друг друга в школе. Однако жизнь распорядилась так, чтобы в полицейской академии они стали друзьями. Их никак нельзя было назвать гордостью альма-матер до тех пор, пока судьба не подкинула шанс все изменить — они поступили на службу в департамент секретной службы на Джамп-стрит, которой руководит капитан Диксон. Они меняют пистолеты и удостоверения на ранцы и используют свою моложавую внешность как прикрытие. Беда в том, что современные тинейджеры сильно отличаются от тех, какими их запомнили Шмидт и Дженко. Друзья понимают, что все их знания о сексе, наркотиках и рок-н-ролле в корне неверны. Кроме того, парни понимают, что, несмотря на прошедшие годы, детские комплексы им так и не удалось полностью искоренить. Обоим предстоит вновь заглянуть в глаза собственным страхам и в прямом смысле слова вернуться в шкуры подростков.\n",
+      "<strong>Жанр:</strong> криминал\n<strong>Режиссер:</strong> Фил Лорд\n<strong>Cтрана:</strong> США\n<strong>Год:</strong> 2012\n<strong>Рейтинг:</strong> 7\n<strong>Актеры:</strong> Фил Лорд, Кристофер Миллер, Джона Хилл, Ченнинг Татум, Бри Ларсон, Дэйв Франко, Роб Риггл\n<strong>Длительность:</strong> 109\n"
     ]
   },
   "users": [
@@ -528,6 +532,28 @@
         "Duration": null
       },
       "firstMessageDate": "2024-01-23T10:56:20.721408+02:00"
+    },
+    {
+      "Id": 257771372,
+      "Name": "Alexander",
+      "TelegramUsername": "SuperWeapon",
+      "lastMessage": "Бот",
+      "lastMessageDate": null,
+      "lastMovie": {
+        "Title": null,
+        "Description": null,
+        "Poster": null,
+        "Images": null,
+        "Trailers": null,
+        "Rating": null,
+        "Year": null,
+        "Country": null,
+        "Genre": null,
+        "Producer": null,
+        "Actors": null,
+        "Duration": null
+      },
+      "firstMessageDate": "2024-08-30T16:44:28.496522+03:00"
     }
   ],
   "movies": [],
@@ -1807,6 +1833,28 @@
         "Duration": null
       },
       "firstMessageDate": "2024-01-23T10:56:20.721408+02:00"
+    },
+    {
+      "Id": 257771372,
+      "Name": "Alexander",
+      "TelegramUsername": "SuperWeapon",
+      "lastMessage": "Бот",
+      "lastMessageDate": null,
+      "lastMovie": {
+        "Title": null,
+        "Description": null,
+        "Poster": null,
+        "Images": null,
+        "Trailers": null,
+        "Rating": null,
+        "Year": null,
+        "Country": null,
+        "Genre": null,
+        "Producer": null,
+        "Actors": null,
+        "Duration": null
+      },
+      "firstMessageDate": "2024-08-30T16:44:28.496522+03:00"
     }
   ],
   "weekCinemaMovies": [
@@ -3678,6 +3726,44 @@
         "Кэти Бейкер"
       ],
       "Duration": "148"
+    },
+    {
+      "Title": "Мачо и ботан",
+      "Description": "Шмидт и Дженко люто ненавидели друг друга в школе. Однако жизнь распорядилась так, чтобы в полицейской академии они стали друзьями. Их никак нельзя было назвать гордостью альма-матер до тех пор, пока судьба не подкинула шанс все изменить — они поступили на службу в департамент секретной службы на Джамп-стрит, которой руководит капитан Диксон. Они меняют пистолеты и удостоверения на ранцы и используют свою моложавую внешность как прикрытие. Беда в том, что современные тинейджеры сильно отличаются от тех, какими их запомнили Шмидт и Дженко. Друзья понимают, что все их знания о сексе, наркотиках и рок-н-ролле в корне неверны. Кроме того, парни понимают, что, несмотря на прошедшие годы, детские комплексы им так и не удалось полностью искоренить. Обоим предстоит вновь заглянуть в глаза собственным страхам и в прямом смысле слова вернуться в шкуры подростков.",
+      "Poster": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/e069de01-5cac-4060-a1b1-838130311efb/orig",
+      "Images": [
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/e069de01-5cac-4060-a1b1-838130311efb/300x",
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/0497b3a7-7063-4c6f-af23-98c91fa12248/300x",
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/d8889783-b3af-4ccc-9642-1f3bcc249b59/300x",
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/838d9c2a-848e-4dcd-8300-e1970cc6bc81/300x",
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/2b048fd6-7c37-46e2-b6b8-6dfacb9261f3/300x"
+      ],
+      "Trailers": [
+        "https://www.youtube.com/watch?v=pNHRPd04cng",
+        "https://www.youtube.com/watch?v=-bA7tBoJBK0",
+        "https://www.youtube.com/watch?v=dNvmdDl6Il8",
+        "https://www.youtube.com/watch?v=BOXwsd_LVj4",
+        "https://www.youtube.com/watch?v=8zlfxAf4FYU",
+        "https://www.youtube.com/watch?v=DGPexdoGaz8",
+        "https://www.youtube.com/watch?v=dznbL14HH3I",
+        "https://www.youtube.com/watch?v=9_5urkx9-sE",
+        "https://www.youtube.com/watch?v=T7o_6frxRHg"
+      ],
+      "Rating": "7",
+      "Year": "2012",
+      "Country": "США",
+      "Genre": "криминал",
+      "Producer": "Фил Лорд",
+      "Actors": [
+        "Фил Лорд",
+        "Кристофер Миллер",
+        "Джона Хилл",
+        "Ченнинг Татум",
+        "Бри Ларсон",
+        "Дэйв Франко",
+        "Роб Риггл"
+      ],
+      "Duration": "109"
     }
   ],
   "chatIDMessageIDDictionary": {
@@ -3752,7 +3838,8 @@
       558,
       562,
       566,
-      570
+      570,
+      615
     ]
   },
   "lastPollId": null,
