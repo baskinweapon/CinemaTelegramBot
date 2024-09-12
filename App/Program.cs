@@ -16,10 +16,6 @@ public enum Version {
 }
 
 class Aplication {
-    
-    // settings
-    public static readonly bool TestFlight = true;
-
     public static void Update() {
         var loop2Task = Task.Run(function: async () => {
             while (true) {
@@ -93,17 +89,7 @@ class Aplication {
         }
         
         DataBase.Instance.Load();
-        
-        // var teaCeremony = new TeaCeremony();
-        // teaCeremony.GetTea();
-        string str = $"Dev Testing CI/CD";
-        
         Update();
-
-        // await TelegramProvider.Instance.bot.SendTextMessageAsync(
-        //     DataBase.Instance.GetMainChatId(),
-        //     str,
-        //     cancellationToken: new CancellationTokenSource().Token);
         
         await TelegramProvider.Instance.Init();
     }

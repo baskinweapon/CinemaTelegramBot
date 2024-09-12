@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aoBmjWUtVPDLok5hR3Vov8OgWSlZ071K1b064BZFt+TUsS441eT2woR/26MR+/dJFifcz+7g04+NyJDv6rLtBg==",
+  "dgSpecHash": "xwfh+Bdi6xokkgHDaqjvefilZKOmB3WoVF7xtseQ1WSMkC/yMkGYJGJdn6aIpCXF6cGBUZdwzVgOSJ5406rV1A==",
   "success": true,
   "projectFilePath": "/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/App.csproj",
   "expectedPackageFiles": [
@@ -44,13 +44,14 @@
     "/Users/aleksandrbaskin/.nuget/packages/runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
-    "/Users/aleksandrbaskin/.nuget/packages/runtime.win.microsoft.win32.primitives/4.3.0/runtime.win.microsoft.win32.primitives.4.3.0.nupkg.sha512",
-    "/Users/aleksandrbaskin/.nuget/packages/runtime.win.system.console/4.3.0/runtime.win.system.console.4.3.0.nupkg.sha512",
-    "/Users/aleksandrbaskin/.nuget/packages/runtime.win.system.diagnostics.debug/4.3.0/runtime.win.system.diagnostics.debug.4.3.0.nupkg.sha512",
-    "/Users/aleksandrbaskin/.nuget/packages/runtime.win.system.io.filesystem/4.3.0/runtime.win.system.io.filesystem.4.3.0.nupkg.sha512",
-    "/Users/aleksandrbaskin/.nuget/packages/runtime.win.system.net.primitives/4.3.0/runtime.win.system.net.primitives.4.3.0.nupkg.sha512",
-    "/Users/aleksandrbaskin/.nuget/packages/runtime.win.system.net.sockets/4.3.0/runtime.win.system.net.sockets.4.3.0.nupkg.sha512",
-    "/Users/aleksandrbaskin/.nuget/packages/runtime.win.system.runtime.extensions/4.3.0/runtime.win.system.runtime.extensions.4.3.0.nupkg.sha512",
+    "/Users/aleksandrbaskin/.nuget/packages/runtime.unix.microsoft.win32.primitives/4.3.0/runtime.unix.microsoft.win32.primitives.4.3.0.nupkg.sha512",
+    "/Users/aleksandrbaskin/.nuget/packages/runtime.unix.system.console/4.3.0/runtime.unix.system.console.4.3.0.nupkg.sha512",
+    "/Users/aleksandrbaskin/.nuget/packages/runtime.unix.system.diagnostics.debug/4.3.0/runtime.unix.system.diagnostics.debug.4.3.0.nupkg.sha512",
+    "/Users/aleksandrbaskin/.nuget/packages/runtime.unix.system.io.filesystem/4.3.0/runtime.unix.system.io.filesystem.4.3.0.nupkg.sha512",
+    "/Users/aleksandrbaskin/.nuget/packages/runtime.unix.system.net.primitives/4.3.0/runtime.unix.system.net.primitives.4.3.0.nupkg.sha512",
+    "/Users/aleksandrbaskin/.nuget/packages/runtime.unix.system.net.sockets/4.3.0/runtime.unix.system.net.sockets.4.3.0.nupkg.sha512",
+    "/Users/aleksandrbaskin/.nuget/packages/runtime.unix.system.private.uri/4.3.0/runtime.unix.system.private.uri.4.3.0.nupkg.sha512",
+    "/Users/aleksandrbaskin/.nuget/packages/runtime.unix.system.runtime.extensions/4.3.0/runtime.unix.system.runtime.extensions.4.3.0.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/system.appcontext/4.3.0/system.appcontext.4.3.0.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/system.buffers/4.3.0/system.buffers.4.3.0.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/system.collections/4.3.0/system.collections.4.3.0.nupkg.sha512",
@@ -105,16 +106,16 @@
     "/Users/aleksandrbaskin/.nuget/packages/system.text.encoding.extensions/4.3.0/system.text.encoding.extensions.4.3.0.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/system.text.regularexpressions/4.3.0/system.text.regularexpressions.4.3.0.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/system.threading/4.3.0/system.threading.4.3.0.nupkg.sha512",
-    "/Users/aleksandrbaskin/.nuget/packages/system.threading.overlapped/4.3.0/system.threading.overlapped.4.3.0.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/system.threading.tasks.extensions/4.3.0/system.threading.tasks.extensions.4.3.0.nupkg.sha512",
+    "/Users/aleksandrbaskin/.nuget/packages/system.threading.threadpool/4.3.0/system.threading.threadpool.4.3.0.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/system.threading.timer/4.3.0/system.threading.timer.4.3.0.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/telegram.bot/20.0.0-alpha.1/telegram.bot.20.0.0-alpha.1.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/videolibrary/3.2.3/videolibrary.3.2.3.nupkg.sha512",
     "/Users/aleksandrbaskin/.nuget/packages/youtubeexplode/6.3.11/youtubeexplode.6.3.11.nupkg.sha512",
-    "/Users/aleksandrbaskin/.nuget/packages/microsoft.netcore.app.host.win-x86/8.0.0/microsoft.netcore.app.host.win-x86.8.0.0.nupkg.sha512"
+    "/Users/aleksandrbaskin/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.0/microsoft.netcore.app.host.linux-x64.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

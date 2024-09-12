@@ -92,7 +92,6 @@ public class TelegramProvider {
             media.Add(new InputMediaPhoto(new InputFileUrl(path[i])));    
         }
         
-        
         await bot.SendMediaGroupAsync(
             chatId: chatId,
             media: media.ToArray(),

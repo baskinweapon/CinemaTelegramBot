@@ -148,7 +148,6 @@ public class DataBase {
     }
     
     public void Load() {
-        Console.WriteLine(GetSavesPath());
         if (File.Exists(GetSavesPath())) {
             using (StreamReader file = File.OpenText(GetSavesPath()))
             {
@@ -180,10 +179,12 @@ public class DataBase {
 
     private string GetSavesPath() {
         // Относительный путь к файлу
-        string relativePath = "DataBase/Saves/saves.json";
-        
+        string relativePath = "saves.json";
+        return relativePath;
         // Относительный путь для подъема на 3 директории вверх и перехода в папку Saves
         string relativeDir = Path.Combine("..", "..", "..");
+        
+        Console.WriteLine("Full path = " + Path.GetFullPath(relativeDir));
         
         // Комбинируем текущий каталог с относительным путем
         return Path.Combine(Path.GetFullPath(relativeDir), relativePath);

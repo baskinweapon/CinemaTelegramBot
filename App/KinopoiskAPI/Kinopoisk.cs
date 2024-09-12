@@ -10,6 +10,21 @@ using Telegram.Bot.Types.ReplyMarkups;
 
 using YoutubeExplode;
 
+public struct Movie {
+    public string Title;
+    public string Description;
+    public string Poster;
+    public string[] Images;
+    public string[] Trailers;
+    public string Rating;
+    public string Year;
+    public string Country;
+    public string Genre;
+    public string Producer;
+    public string[] Actors;
+    public string Duration;
+}
+
 public class Kinopoisk {
     private int _maxImages = 5;
     private readonly int maxActors = 7;
@@ -47,6 +62,7 @@ public class Kinopoisk {
         if (movie.Trailers.Length > 0 && movie.Trailers[0] != "") {
             Message ms;
             foreach (var trailer in movie.Trailers) {
+                
                 YoutubeExplode.Videos.Video video;
                 try {
                     video = await youtube.Videos.GetAsync(trailer);
@@ -73,7 +89,40 @@ public class Kinopoisk {
                     }
                 }
                 catch (Exception e) {
-                    Console.WriteLine("Bad youtube link");
+                    try {
+                        video = await youtube.Videos.GetAsync("https://www.youtube.com/watch?v=RqJVa0fl01w");
+
+                        var streamManifest = await youtube.Videos.Streams.GetManifestAsync(video.Id);
+                        var muxedStreams = streamManifest.GetMuxedStreams().OrderByDescending(s => s.VideoQuality).ToList();
+                        if (muxedStreams.Any()) {
+                            var streamInfo = muxedStreams.First();
+                            using var httpClient = new HttpClient();
+                            var stream = await httpClient.GetStreamAsync(streamInfo.Url);
+                            
+                            ms = await TelegramProvider.Instance.bot.SendVideoAsync(
+                                chatId: chatId,
+                                video: new InputFileStream(stream),
+                                caption: message,
+                                replyToMessageId: messageThreadId,
+                                parseMode: ParseMode.Html,
+                                supportsStreaming: true,
+                                replyMarkup: new InlineKeyboardMarkup(TelegramProvider.Instance.additionButton)
+                            );
+
+                            DataBase.Instance.AddMovieMessageIdDictionary(ms.MessageId, new[] { message, addition });
+                        }
+                    }
+                    catch (Exception ex) {
+                        Console.WriteLine("have links but dont parse");
+                        ms = await TelegramProvider.Instance.bot.SendTextMessageAsync(
+                            chatId: chatId,
+                            replyToMessageId: messageThreadId,
+                            text: message,
+                            parseMode: ParseMode.Html);
+                        
+                        DataBase.Instance.AddMovieMessageIdDictionary(ms.MessageId, new[] { message, addition });
+                    }
+                    break;
                 }
             }
         } else {
@@ -102,7 +151,14 @@ public class Kinopoisk {
                 }
             }
             catch (Exception e) {
-                Console.WriteLine("Bad youtube link");
+                var ms = await TelegramProvider.Instance.bot.SendTextMessageAsync(
+                    chatId: chatId,
+                    replyToMessageId: messageThreadId,
+                    text: message,
+                    parseMode: ParseMode.Html);
+                    
+                DataBase.Instance.AddMovieMessageIdDictionary(ms.MessageId, new[] { message, addition });
+                Console.WriteLine("No links and dont parse");
             }
         }
         
