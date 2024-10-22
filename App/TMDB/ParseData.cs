@@ -150,3 +150,22 @@ public class MovieData {
     public string[]? MovieImages { get; set; }
     public Dictionary<string, string[]>? Credits { get; set; }
 }
+
+public class DiscoverMoviews
+{
+    public int? page { get; set; }
+    public List<MovieDetails> results { get; set; }
+    public int? total_pages { get; set; }
+    public int? total_results { get; set; }
+}
+
+public class Genre
+{
+    public int? id { get; set; }
+    public string name { get; set; }
+}
+
+public class Genres
+{
+    public List<Genre> genres { get; set; }
+}

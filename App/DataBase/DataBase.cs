@@ -153,7 +153,7 @@ public class DataBase {
             using (StreamReader file = File.OpenText(GetSavesPath()))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                content = (Data)serializer.Deserialize(file, typeof(Data)) ?? new Data();
+                content = (Data)serializer.Deserialize(file, typeof(Data))! ?? new Data();
             }
         } else {
             content = new Data();

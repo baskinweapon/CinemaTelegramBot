@@ -45,31 +45,38 @@ public static class FindCinemaBehavior {
         if (arr.Length > 0)
             await TelegramProvider.Instance.SendMediaGroupImages(arr, chatId, messageThreadId);
         
+        Console.WriteLine("Try stream video");
         if (string.IsNullOrEmpty(movie.MovieTrailer)) return;
         var path = await DownloadVideo(movie.MovieTrailer);
-        
+
+        Console.WriteLine("Saved video");
         await using FileStream fs = File.OpenRead(path);
+        Console.WriteLine("Start stream video " + fs.Length);
+        
+        var response = await new ChatAI().SendLastMessage(movie.MovieDetails.original_title);
+        response += "\n\n" + "🎥🍿 <strong>---NEXT---</strong>🍿🎥";
         await TelegramProvider.Instance.bot.SendVideoAsync(
             chatId: chatId,
             video: new InputFileStream(fs),
+            caption: response,
             replyToMessageId: messageThreadId,
             parseMode: ParseMode.Html,
             supportsStreaming: true
         );
-
-
-        var response = await new ChatAI().SendLastMessage(movie.MovieDetails.original_title);
-        await TelegramProvider.Instance.bot.SendTextMessageAsync(
-            chatId: chatId,
-            text: response + "\n\n" + "🎥🍿 <strong>---NEXT---</strong>. 🍿🎥",
-            replyToMessageId: messageThreadId,
-            parseMode: ParseMode.Html
-        );
+        
+        Console.WriteLine("End stream video");
     }
 
-     private static string GenerateAdditionalInfo(MovieData movie) {
-         var director = movie.Credits["Director"].First();
-         var actors = movie.Credits["Cast"].Take(3).ToArray();
+     private static string GenerateAdditionalInfo(MovieData movie) { 
+         var director = "";
+         if (movie.Credits != null && movie.Credits.TryGetValue("Director", out var credit)) {
+            director = credit.First(); 
+         }
+         string[] actors = new[] { "", "" };
+         if (movie.Credits != null && movie.Credits.TryGetValue("Cast", out var cast)) {
+                actors = cast.Take(3).ToArray(); 
+         }
+         
          var date = DateTime.Parse(movie.MovieDetails.release_date).ToString("dd MMMM yyyy");
          var addition =
              $"<strong>Director:</strong> {director}\n" +
@@ -80,15 +87,36 @@ public static class FindCinemaBehavior {
          return addition;
      }
      
+    
      private static async Task<string> DownloadVideo(string url) {
          var path = $"./video.mp4";
-         var youtube = new YoutubeClient();
-         var video = await youtube.Videos.GetAsync(url);
-         // var streamManifest = await youtube.Videos.Streams.GetManifestAsync(video.Id);
-         // var streamInfo = streamManifest
-         //     .GetVideoOnlyStreams().Where(s => s.Container == Container.Mp4).GetWithHighestVideoQuality();
+         if (File.Exists(path)) {
+             File.Delete(path);
+         }
+        var youtube = new YoutubeClient();
+        var streamManifest = await youtube.Videos.Streams.GetManifestAsync(url);
          
-         await youtube.Videos.DownloadAsync(url, path);
+        // Select best audio stream (highest bitrate)
+         var audioStreamInfo = streamManifest
+             .GetAudioStreams()
+             .Where(s => s.Container == Container.Mp4)
+             .GetWithHighestBitrate();
+
+        // Select best video stream (1080p60 in this example)
+         var videoStreamInfo = streamManifest
+             .GetVideoStreams()
+             // .Where(s => s.Container == Container.Mp4)
+             .FirstOrDefault(s => s.VideoQuality.MaxHeight == 720);
+         
+         if (videoStreamInfo == null) {
+                videoStreamInfo = streamManifest
+                    .GetVideoStreams().GetWithHighestVideoQuality();
+         }
+         
+         // Download and mux streams into a single file
+         var streamInfos = new IStreamInfo[] { audioStreamInfo, videoStreamInfo };
+         await youtube.Videos.DownloadAsync(streamInfos, new ConversionRequestBuilder(path).Build());
+         
          return path;
      }
 }

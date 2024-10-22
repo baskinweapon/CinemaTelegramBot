@@ -53,6 +53,69 @@ class TMDBAPI
         }
     }
 
+    public static async Task<Genres?> GetAllGenres() {
+        var client = new RestClient(baseUrl);
+
+        // Запрос для получения списка жанров
+        var genresRequest = new RestRequest("/genre/movie/list")
+            .AddParameter("api_key", apiKey);
+
+        var genresResponse = await client.ExecuteAsync<Genres>(genresRequest);
+
+        if (genresResponse.IsSuccessful)
+        {
+            var genres = genresResponse.Data;
+
+            if (genres != null && genres.genres.Count > 0)
+            {
+                Console.WriteLine("Жанры:");
+                foreach (var genre in genres.genres)
+                {
+                    Console.WriteLine($"- {genre.name}");
+                }
+                return genres;
+            }
+            else
+            {
+                Console.WriteLine("Жанры не найдены.");
+                return null;
+            }
+        }
+        else
+        {
+            Console.WriteLine($"Ошибка при получении жанров: {genresResponse.StatusCode}, {genresResponse.Content}");
+            return null;
+        }
+    }
+    
+    public static async Task<string> GetRandomMovies() {
+        var client = new RestClient(baseUrl);
+        
+        var random = new Random();
+        var randomRequest = new RestRequest($"/discover/movie")
+            .AddParameter("api_key", apiKey).AddParameter("page", random.Next(1, 100));
+        
+        var randomResponse = await client.ExecuteAsync<DiscoverMoviews>(randomRequest);
+        
+        if (randomResponse.IsSuccessful) {
+            var result = randomResponse.Data;
+            
+            if (result != null && result.results.Count > 0) {
+                Console.WriteLine("results.Count: " + result.results.Count);
+                var r = random.Next(0, result.results.Count);
+                var movie = result.results[r];
+                
+                return movie.original_title;
+            } else {
+                Console.WriteLine("Фильмы не найдены.");
+                return "";
+            }
+        } else {
+            Console.WriteLine($"Ошибка: {randomResponse.StatusCode}, {randomResponse.Content}");
+            return "";
+        }
+    }
+
     public static async Task<string[]?> GetMovieImages(int movieId)
     {
         var client = new RestClient(baseUrl);
@@ -85,10 +148,13 @@ class TMDBAPI
 
             // Выводим фоны
             if (images.backdrops.Count > 0) {
-                Console.WriteLine("Фоны:");
-                for (var index = 0; index < images.backdrops.Count; index++) {
+                // images.backdrops.Sort((a, b) => (a.height + a.width).CompareTo(b.height + b.width));
+                
+                for (var index = images.backdrops.Count - 1; index >= 0; index--) {
+                    
                     var backdrop = images.backdrops[index];
-                    if (index <= 6) {
+                    
+                    if (imageArr.Count <= 5 && !imageArr.Contains(backdrop.file_path)) {
                         imageArr.Add($"{imageBaseUrl}{backdrop.file_path}");
                     } else {
                         break;
@@ -203,7 +269,7 @@ class TMDBAPI
         
             if (credits != null)
             {
-                Console.WriteLine("Режиссеры:");
+                // Console.WriteLine("Режиссеры:");
                 foreach (var crew in credits.crew)
                 {
                     if (crew.job == "Director")
@@ -216,11 +282,11 @@ class TMDBAPI
                             dict["Director"] = secondArr;
                         } else
                             dict.Add("Director", new string[] {crew.name});
-                        Console.WriteLine($"- {crew.name}");
+                        // Console.WriteLine($"- {crew.name}");
                     }
                 }
         
-                Console.WriteLine("Актеры:");
+                // Console.WriteLine("Актеры:");
                 foreach (var cast in credits.cast)
                 {
                     if (dict.ContainsKey("Cast")) {
@@ -231,7 +297,7 @@ class TMDBAPI
                         dict["Cast"] = secondArr;
                     } else
                         dict.Add("Cast", new string[] {cast.name});
-                    Console.WriteLine($"- {cast.name}");
+                    // Console.WriteLine($"- {cast.name}");
                 }
                 
                 if (dict.Count > 0) {
