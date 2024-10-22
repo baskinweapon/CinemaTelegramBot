@@ -21,3 +21,4 @@
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/obj/Release/net8.0/linux-x64/App.pdb
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/obj/Release/net8.0/linux-x64/App.genruntimeconfig.cache
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/obj/Release/net8.0/linux-x64/ref/App.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/linux-x64/RestSharp.dll

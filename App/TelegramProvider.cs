@@ -11,7 +11,7 @@ public class TelegramProvider {
     
     public static TelegramProvider Instance => _instance ??= new TelegramProvider();
 
-    private const string Token = "6573556229:AAEjGUau1Fr0X5eFlRjpY89v1sdr9iLmNqc";
+    private const string Token = Keys.TokenTG;
 
     public TelegramBotClient bot;
     
@@ -23,16 +23,6 @@ public class TelegramProvider {
     
     async Task CallbackQueryHandlerAsync(CallbackQuery callbackQuery, CancellationToken cancellationToken) {
         if (callbackQuery.Data == "movie_description") {
-            // if (Mode.IsDev) {
-            //     await bot.EditMessageTextAsync(
-            //      callbackQuery.Message.Chat.Id,
-            //      callbackQuery.Message.MessageId,
-            //      DataBase.Instance.GetMovieMessageIdDictionary(callbackQuery.Message.MessageId),
-            //          cancellationToken: cancellationToken,
-            //          replyMarkup: new InlineKeyboardMarkup(additionButton),
-            //          parseMode: ParseMode.Html);
-            // }
-            // else {
                 await bot.EditMessageCaptionAsync(
                     callbackQuery.Message.Chat.Id,
                     callbackQuery.Message.MessageId,
@@ -40,20 +30,9 @@ public class TelegramProvider {
                     cancellationToken: cancellationToken,
                     replyMarkup: new InlineKeyboardMarkup(additionButton),
                     parseMode: ParseMode.Html);
-            // }
         }
 
         if (callbackQuery.Data == "movie_additional") {
-            // if (Mode.IsDev) {
-            //     await bot.EditMessageTextAsync(
-            //      callbackQuery.Message.Chat.Id,
-            //      callbackQuery.Message.MessageId,
-            //      DataBase.Instance.GetMovieMessageIdDictionaryAdditional(callbackQuery.Message.MessageId),
-            //      cancellationToken: cancellationToken,
-            //      replyMarkup: new InlineKeyboardMarkup(descriptionButton),
-            //      parseMode: ParseMode.Html);
-            // }
-            // else {
                 await bot.EditMessageCaptionAsync(
                     callbackQuery.Message.Chat.Id,
                     callbackQuery.Message.MessageId,
@@ -61,8 +40,7 @@ public class TelegramProvider {
                     cancellationToken: cancellationToken,
                     replyMarkup: new InlineKeyboardMarkup(descriptionButton),
                     parseMode: ParseMode.Html);
-            }
-        // }
+        }
         await bot.AnswerCallbackQueryAsync(
                 callbackQuery.Id,
                 $"Computing...", cancellationToken: cancellationToken);

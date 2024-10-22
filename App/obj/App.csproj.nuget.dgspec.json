@@ -42,6 +42,14 @@
               "target": "Package",
               "version": "[1.11.54, )"
             },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[2.1.0-beta.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[112.1.0, )"
+            },
             "Telegram.Bot": {
               "target": "Package",
               "version": "[20.0.0-alpha.1, )"
@@ -52,7 +60,11 @@
             },
             "YoutubeExplode": {
               "target": "Package",
-              "version": "[6.3.11, )"
+              "version": "[6.4.3, )"
+            },
+            "YoutubeExplode.Converter": {
+              "target": "Package",
+              "version": "[6.4.3, )"
             }
           },
           "imports": [
@@ -66,23 +78,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[8.0.0, 8.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
         }
       }
     }

@@ -6,6 +6,7 @@
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/linux-x64/publish/AngleSharp.dll
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/linux-x64/publish/HtmlAgilityPack.dll
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/linux-x64/publish/Newtonsoft.Json.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/linux-x64/publish/RestSharp.dll
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/linux-x64/publish/Telegram.Bot.dll
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/linux-x64/publish/libvideo.dll
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/linux-x64/publish/YoutubeExplode.dll

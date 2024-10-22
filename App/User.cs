@@ -6,10 +6,10 @@ public class User {
     public string? TelegramUsername { get; set; }
     public string lastMessage { get; set; }
     public DateTime? lastMessageDate { get; set; }
-    public Movie lastMovie { get; set; }
+    public MovieData lastMovie { get; set; }
     public DateTime firstMessageDate { get; set; }
     
-    public User(long id, string name, string? telegramUsername, DateTime firstMessageDate, string lastMessage = default, DateTime? lastMessageDate = default, Movie lastMovie = default) {
+    public User(long id, string name, string? telegramUsername, DateTime firstMessageDate, string lastMessage = default, DateTime? lastMessageDate = default, MovieData lastMovie = default) {
         Id = id;
         Name = name;
         TelegramUsername = telegramUsername;

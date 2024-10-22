@@ -12,13 +12,13 @@ public class Data {
     public int sizeOfNightCinemaSessions;
     public Dictionary<int, string[]> movieMessageIdDictionary = new();
     public List<User> users = new();
-    public List<Movie> movies = new();
+    public List<MovieData> movies = new();
     
     public List<User> weekCinemaUsers = new();
-    public List<Movie> weekCinemaMovies = new();
+    public List<MovieData> weekCinemaMovies = new();
     
     public Dictionary<long, List<int>> chatIDMessageIDDictionary = new();
-    public Message lastPollId;
+    public Message? lastPollId;
     public ChatId mainChatId;
 }
 
@@ -31,13 +31,14 @@ public class DataBase {
     private Data content = new();
 
     public List<User> GetWeekCinemaUsers() => content.weekCinemaUsers;
-    public List<Movie> GetWeekCinemaMovies() => content.weekCinemaMovies;
+    public List<MovieData> GetWeekCinemaMovies() => content.weekCinemaMovies;
     
-    public Message GetLastPollId() => content.lastPollId;
-    public void SetLastPollId(Message id) {
+    public Message? GetLastPollId() => content.lastPollId;
+    public void SetLastPollId(Message? id) {
         content.lastPollId = id;
         Save();
     }
+    
     
     public void SetLastNightCinemaDate(DateTime date) {
         content.lastNightCinemaDate = date;
@@ -93,7 +94,7 @@ public class DataBase {
         Save();
     }
     
-    public void AddWeekCinemaMovie(Movie movie) {
+    public void AddWeekCinemaMovie(MovieData movie) {
         content.weekCinemaMovies.Add(movie);
         Save();
     }
@@ -107,7 +108,7 @@ public class DataBase {
     public string GetMovieMessageIdDictionaryAdditional(int messageId) => content.movieMessageIdDictionary.TryGetValue(messageId, out var value) ? value[1] : "Not found";
     
     
-    public void AddMovie(Movie movie) {
+    public void AddMovie(MovieData movie) {
         content.movies.Add(movie);
         Save();
     }
@@ -172,10 +173,10 @@ public class DataBase {
     }
 
 
-    public void SetLastPollId(Poll updatePoll) {
-        content.lastPollId.Poll = updatePoll;
-        Save();
-    }
+    // public void SetLastPollId(Poll updatePoll) {
+    //     content.lastPollId.Poll = updatePoll;
+    //     Save();
+    // }
 
     private string GetSavesPath() {
         // Относительный путь к файлу

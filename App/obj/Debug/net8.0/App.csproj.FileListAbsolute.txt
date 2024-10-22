@@ -64,3 +64,9 @@
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/obj/Debug/net8.0/App.pdb
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/obj/Debug/net8.0/App.genruntimeconfig.cache
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/obj/Debug/net8.0/ref/App.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Debug/net8.0/RestSharp.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Debug/net8.0/CliWrap.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Debug/net8.0/YoutubeExplode.Converter.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Debug/net8.0/OpenAI.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Debug/net8.0/System.ClientModel.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Debug/net8.0/System.Memory.Data.dll

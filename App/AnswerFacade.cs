@@ -2,8 +2,6 @@ using App;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
-using Telegram.Bot.Types.ReplyMarkups;
-using User = App.User;
 
 public class StickerPack {
     public static string[] Stickers => stickerPack;
@@ -34,7 +32,7 @@ public class StickerPack {
 }
 
 public class AnswerFacade {
-    private string _warningMessage = "В этом чате можно отправлять только одно сообщение раз в неделю.<strong> Порядок и разумность превыше всего </strong>";
+    private string _warningMessage = "In this chat, you can only send one message per week.\n\n<strong>Order and reason above all.</strong>";
     
     public async void SendAnswer(Update update) {
         if (update.Message is not { } message)
@@ -48,7 +46,6 @@ public class AnswerFacade {
         // Topics Logic
         if (message.MessageThreadId is not null) {
             var topicType = new GroupTopics().GetTopicType(message.MessageThreadId.Value);
-            
             switch (topicType) {
                 case TopicType.Review:
                     break;
@@ -58,15 +55,6 @@ public class AnswerFacade {
                 case TopicType.EnglishCinema:
                     break;
                 case TopicType.TeaCeremony:
-                    // future feature
-                    
-                    // var teaCeremony = new TeaCeremony();
-                    // var messages = teaCeremony.GetBlog();
-                    //
-                    // foreach (var msg in messages) {
-                    //     await TelegramProvider.Instance.bot.SendTextMessageAsync(
-                    //         message.Chat.Id, msg, message.MessageThreadId, ParseMode.Html);
-                    // }
                     break;
                 case TopicType.NightChillChat:
                     break;
@@ -76,31 +64,41 @@ public class AnswerFacade {
     
     private async void SendToWeekMovies(Message message) {
         
-        if (Mode.IsDev) {}
-        else {
-            // if (DataBase.Instance.GetWeekCinemaUsers().Find(x => x.Id == message.From.Id) != null) {
-            //     await TelegramProvider.Instance.bot.DeleteMessageAsync(message.Chat.Id, message.MessageId);
-            //     await TelegramProvider.Instance.bot.SendTextMessageAsync(message.Chat.Id, _warningMessage, message.MessageThreadId, ParseMode.Html);
-            //     return;
-            // }
+        if (!Mode.IsDev && DataBase.Instance.GetWeekCinemaUsers().Any(user => user.Id == message.From.Id)) {
+            await TelegramProvider.Instance.bot.SendTextMessageAsync(message.Chat.Id, _warningMessage, message.MessageThreadId, ParseMode.Html);
+            return;
         }
         
-        await TelegramProvider.Instance.bot.SendTextMessageAsync(
-            message.Chat.Id, $"В поисках твоего фильма: {message.Text.Trim()}.", message.MessageThreadId, ParseMode.Html);
+        var m = await TelegramProvider.Instance.bot.SendTextMessageAsync(
+            message.Chat.Id, $"Try to find your movie. \n 🎥🍿 <strong>{message.Text.Trim()}</strong>. 🍿🎥", message.MessageThreadId, ParseMode.Html);
         
         var stickerId = new InputFileId(StickerPack.GetRandomSticker());
         var l = await TelegramProvider.Instance.bot.SendStickerAsync(message.Chat.Id, stickerId, message.MessageThreadId);
-        DeleteSticker(l);
+        DeleteMessage(l);
+        DeleteMessage(m);
+        DeleteMessage(message, 20);
         
-        var kinoPoisk = new Kinopoisk();
-        kinoPoisk.SendToWeekMovies(message);
-        // var weekMovies = new WeekMovies();
-        // weekMovies.SendToWeekMovies(message);
+        // Find movie
+        var movie = await new TMDBAPI().SearchMovies(message.Text.Trim());
+        
+        if (movie == null) {
+            var mes = await TelegramProvider.Instance.bot.SendTextMessageAsync(message.Chat.Id, $"🤨 <strong>I can't find your film {message.Text} </strong> 🤨", message.MessageThreadId, ParseMode.Html);
+            DeleteMessage(mes, 10);
+        } else {
+            FindCinemaBehavior.SendAboutFilm(movie, message.Chat.Id, message.From.Username, message.MessageThreadId);
+            
+            DataBase.Instance.AddWeekCinemaMovie(movie);
+            DataBase.Instance.AddWeekCinemaUser(DataBase.Instance.GetOrNewUser(message));
+        }
+        
+        DataBase.Instance.AddChatIDMessageIDDictionary(message.Chat.Id, message.MessageId);
     }
     
-    private async void DeleteSticker(Message message) {
-        await Task.Delay(2 * 1000);
+    private async void DeleteMessage(Message message, int time = 2) {
+        await Task.Delay(time * 1000);
         await TelegramProvider.Instance.bot.DeleteMessageAsync(message.Chat.Id, message.MessageId);
     }
-    
+
+
+   
 }
