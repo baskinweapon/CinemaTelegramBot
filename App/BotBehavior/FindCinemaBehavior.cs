@@ -14,7 +14,7 @@ public static class FindCinemaBehavior {
         var message = ($"<strong>{movie.MovieDetails.original_title}.</strong>\n<i>Sponsored by @{userName}</i>" + "\n\n" + movie.MovieDetails.overview +
                        "\n");
         
-        var addition = GenerateAdditionalInfo(movie);
+        var addition = await GenerateAdditionalInfo(movie);
         
         Message ms;
         if (movie.MovieImages == null || movie.MovieImages.Length == 0) {
@@ -67,7 +67,7 @@ public static class FindCinemaBehavior {
         Console.WriteLine("End stream video");
     }
 
-     private static string GenerateAdditionalInfo(MovieData movie) { 
+     private static async Task<string> GenerateAdditionalInfo(MovieData movie) { 
          var director = "";
          if (movie.Credits != null && movie.Credits.TryGetValue("Director", out var credit)) {
             director = credit.First(); 
@@ -77,12 +77,25 @@ public static class FindCinemaBehavior {
                 actors = cast.Take(3).ToArray(); 
          }
          
+         var genre = "";
+            if (movie.MovieDetails.genre_ids != null) {
+                var genres = await TMDBAPI.GetAllGenres();
+                var ids = movie.MovieDetails.genre_ids;
+                for (int i = 0; i < ids.Length; i++) {
+                    var id = ids[i];
+                    if (genres.genres.FirstOrDefault(g => g.id == id) != null) {
+                        genre += genres.genres.FirstOrDefault(g => g.id == id).name + (i != ids.Length - 1 ? ", " : ".");
+                    }
+                }
+            }
+         
          var date = DateTime.Parse(movie.MovieDetails.release_date).ToString("dd MMMM yyyy");
          var addition =
              $"<strong>Director:</strong> {director}\n" +
              $"<strong>Year:</strong> {date}\n" +
              $"<strong>Rating:</strong> {(int)movie.MovieDetails.popularity} / 100\n" +
-             $"<strong>Cast:</strong> {string.Join(", ", actors)}\n";
+             $"<strong>Cast:</strong> {string.Join(", ", actors)}\n" +
+            $"<strong>Genre:</strong> {genre}\n";
 
          return addition;
      }

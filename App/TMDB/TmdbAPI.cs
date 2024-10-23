@@ -32,11 +32,14 @@ class TMDBAPI
                 Console.WriteLine($"Название: {movie.original_title}");
                 Console.WriteLine($"Дата выхода: {movie.release_date}");
                 Console.WriteLine($"Описание: {movie.overview}");
+                Console.WriteLine($"genres: {string.Join(", ", movie.genre_ids)}");
                 
                 // get data
                 var data = new MovieData();
                 data.MovieTrailer = await GetMovieTrailer(movie.id);
                 data.MovieDetails = await GetMovieDetails(movie.id);
+                if (data.MovieDetails != null)
+                    data.MovieDetails.genre_ids = movie.genre_ids;
                 data.MovieImages = await GetMovieImages(movie.id);
                 data.Credits = await GetCredits(movie.id);
 
@@ -62,17 +65,10 @@ class TMDBAPI
 
         var genresResponse = await client.ExecuteAsync<Genres>(genresRequest);
 
-        if (genresResponse.IsSuccessful)
-        {
+        if (genresResponse.IsSuccessful) {
             var genres = genresResponse.Data;
 
-            if (genres != null && genres.genres.Count > 0)
-            {
-                Console.WriteLine("Жанры:");
-                foreach (var genre in genres.genres)
-                {
-                    Console.WriteLine($"- {genre.name}");
-                }
+            if (genres != null && genres.genres.Count > 0) {
                 return genres;
             }
             else
@@ -88,12 +84,17 @@ class TMDBAPI
         }
     }
     
-    public static async Task<string> GetRandomMovies() {
+    public static async Task<string> GetRandomMovies(int? genreId = null) {
         var client = new RestClient(baseUrl);
         
         var random = new Random();
         var randomRequest = new RestRequest($"/discover/movie")
             .AddParameter("api_key", apiKey).AddParameter("page", random.Next(1, 100));
+        if (genreId != null) {
+            randomRequest = new RestRequest($"/discover/movie")
+                .AddParameter("api_key", apiKey).AddParameter("page", random.Next(1, 10)).AddParameter("with_genres", genreId.Value);
+        }
+        
         
         var randomResponse = await client.ExecuteAsync<DiscoverMoviews>(randomRequest);
         

@@ -70,6 +70,16 @@ public class AnswerFacade {
         
         if (message.Text.Contains("/random")) {
             var movieName = await TMDBAPI.GetRandomMovies();
+            Genre genre;
+            if (message.Text.Contains("/random_")) {
+                var genres = await TMDBAPI.GetAllGenres();
+                
+                genre = genres.genres.FirstOrDefault(genre => genre.name.ToLower() == message.Text.Split("_")[1].Split("@")[0].ToLower());
+                if (genre != null) {
+                    movieName = await TMDBAPI.GetRandomMovies(genre.id);
+                }
+            }
+            
             var m = await TelegramProvider.Instance.bot.SendTextMessageAsync(
                 message.Chat.Id, $"🎥🍿 <strong>Find random movie</strong>. 🍿🎥", message.MessageThreadId, ParseMode.Html);
             message.Text = movieName;
