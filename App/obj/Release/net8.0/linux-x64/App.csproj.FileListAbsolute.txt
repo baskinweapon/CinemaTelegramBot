@@ -22,3 +22,8 @@
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/obj/Release/net8.0/linux-x64/App.genruntimeconfig.cache
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/obj/Release/net8.0/linux-x64/ref/App.dll
 /Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/linux-x64/RestSharp.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/linux-x64/CliWrap.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/linux-x64/OpenAI.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/linux-x64/System.ClientModel.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/linux-x64/System.Memory.Data.dll
+/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/bin/Release/net8.0/linux-x64/YoutubeExplode.Converter.dll

@@ -87,7 +87,7 @@ class Aplication {
     
     // main
     public static async Task Main(String[] args) {
-        Mode.IsDev = true;
+        // Mode.IsDev = true;
         
         DataBase.Instance.Load();
         Update();

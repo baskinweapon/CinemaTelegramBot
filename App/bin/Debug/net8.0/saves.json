@@ -1,6 +1,6 @@
 {
   "lastNightCinemaDate": "0001-01-01T00:00:00",
-  "durationBetweenNightCinema": "739181.03:05:52.3537910",
+  "durationBetweenNightCinema": "739211.14:30:01.5288360",
   "sizeOfNightCinemaSessions": 0,
   "movieMessageIdDictionary": {
     "2654": [
@@ -46,6 +46,30 @@
     "2761": [
       "<strong>Basic Instinct.</strong>\n<i>Sponsored by @SuperWeapon</i>\n\nCatherine, a novelist with an insatiable sexual appetite, becomes a prime suspect when her boyfriend is brutally murdered -- a crime she had described in her latest story.\n",
       "<strong>Director:</strong> Paul Verhoeven\n<strong>Year:</strong> 20 March 1992\n<strong>Rating:</strong> 43 / 100\n<strong>Cast:</strong> Michael Douglas, Sharon Stone, George Dzundza\n<strong>Genre:</strong> Thriller, Mystery.\n"
+    ],
+    "2783": [
+      "<strong>Tengo ganas de ti.</strong>\n<i>Sponsored by @SuperWeapon</i>\n\nThe sexy Gin is the new love of Hache, but this can not forget his former girlfriend, so the love triangle is inevitable.\n",
+      "<strong>Director:</strong> Fernando González Molina\n<strong>Year:</strong> 22 June 2012\n<strong>Rating:</strong> 43 / 100\n<strong>Cast:</strong> Mario Casas, Clara Lago, María Valverde\n<strong>Genre:</strong> Drama, Romance.\n"
+    ],
+    "2793": [
+      "<strong>Venom: Let There Be Carnage.</strong>\n<i>Sponsored by @SuperWeapon</i>\n\nAfter finding a host body in investigative reporter Eddie Brock, the alien symbiote must face a new enemy, Carnage, the alter ego of serial killer Cletus Kasady.\n",
+      "<strong>Director:</strong> Andy Serkis\n<strong>Year:</strong> 30 September 2021\n<strong>Rating:</strong> 372 / 100\n<strong>Cast:</strong> Tom Hardy, Woody Harrelson, Michelle Williams\n<strong>Genre:</strong> Science Fiction, Action, Adventure.\n"
+    ],
+    "2802": [
+      "<strong>Tangled.</strong>\n<i>Sponsored by @SuperWeapon</i>\n\nFeisty teenager Rapunzel, who has long and magical hair, wants to go and see sky lanterns on her eighteenth birthday, but she's bound to a tower by her overprotective mother. She strikes a deal with Flynn Rider, a charming wanted thief, and the duo set off on an action-packed escapade.\n",
+      "<strong>Director:</strong> Nathan Greno\n<strong>Year:</strong> 24 November 2010\n<strong>Rating:</strong> 111 / 100\n<strong>Cast:</strong> Mandy Moore, Zachary Levi, Donna Murphy\n<strong>Genre:</strong> Animation, Family.\n"
+    ],
+    "2811": [
+      "<strong>Bridge to Terabithia.</strong>\n<i>Sponsored by @SuperWeapon</i>\n\nJesse Aarons trained all summer to become the fastest runner in school. So he's very upset when newcomer Leslie Burke outruns him and everyone else. Despite this and other differences including that she's rich, he's poor, she's a city girl, and he's a country boy the two become fast friends. Together they create Terabithia, a land of monsters, trolls, ogres, and giants where they rule as king and queen.\n",
+      "<strong>Director:</strong> Gábor Csupó\n<strong>Year:</strong> 15 February 2007\n<strong>Rating:</strong> 54 / 100\n<strong>Cast:</strong> Josh Hutcherson, AnnaSophia Robb, Zooey Deschanel\n<strong>Genre:</strong> Adventure, Drama, Family.\n"
+    ],
+    "2821": [
+      "<strong>Mia.</strong>\n<i>Sponsored by @SuperWeapon</i>\n\nMia recounts her most intimate confessions, uncensored, in her first approach to a totally new world of domination and submission.\n",
+      "<strong>Director:</strong> Oriol Colomar\n<strong>Year:</strong> 17 December 2017\n<strong>Rating:</strong> 35 / 100\n<strong>Cast:</strong> Aya Wolf, Oriol Colomar\n<strong>Genre:</strong> Drama, Documentary.\n"
+    ],
+    "812": [
+      "<strong>The Substance.</strong>\n<i>Sponsored by @eclipssss</i>\n\nA fading celebrity decides to use a black market drug, a cell-replicating substance that temporarily creates a younger, better version of herself.\n",
+      "<strong>Director:</strong> Coralie Fargeat\n<strong>Year:</strong> 07 September 2024\n<strong>Rating:</strong> 2641 / 100\n<strong>Cast:</strong> Demi Moore, Margaret Qualley, Dennis Quaid\n<strong>Genre:</strong> Horror, Drama, Science Fiction.\n"
     ]
   },
   "users": [
@@ -57,6 +81,24 @@
       "lastMessageDate": null,
       "lastMovie": null,
       "firstMessageDate": "2024-10-23T02:37:37.632821+03:00"
+    },
+    {
+      "Id": 347364314,
+      "Name": "Alexandr",
+      "TelegramUsername": "eclipssss",
+      "lastMessage": "The Substance",
+      "lastMessageDate": null,
+      "lastMovie": null,
+      "firstMessageDate": "2024-10-25T16:16:20.744775+03:00"
+    },
+    {
+      "Id": 347364314,
+      "Name": "Alexandr",
+      "TelegramUsername": "eclipssss",
+      "lastMessage": "The Substance",
+      "lastMessageDate": null,
+      "lastMovie": null,
+      "firstMessageDate": "2024-10-25T16:16:23.30422+03:00"
     }
   ],
   "movies": [],
@@ -159,6 +201,96 @@
       "lastMessageDate": null,
       "lastMovie": null,
       "firstMessageDate": "2024-10-23T02:37:37.632821+03:00"
+    },
+    {
+      "Id": 257771372,
+      "Name": "Alexander",
+      "TelegramUsername": "SuperWeapon",
+      "lastMessage": "/random_comedy@cinema_nights_bot",
+      "lastMessageDate": null,
+      "lastMovie": null,
+      "firstMessageDate": "2024-10-23T02:37:37.632821+03:00"
+    },
+    {
+      "Id": 257771372,
+      "Name": "Alexander",
+      "TelegramUsername": "SuperWeapon",
+      "lastMessage": "/random_comedy@cinema_nights_bot",
+      "lastMessageDate": null,
+      "lastMovie": null,
+      "firstMessageDate": "2024-10-23T02:37:37.632821+03:00"
+    },
+    {
+      "Id": 257771372,
+      "Name": "Alexander",
+      "TelegramUsername": "SuperWeapon",
+      "lastMessage": "/random_comedy@cinema_nights_bot",
+      "lastMessageDate": null,
+      "lastMovie": null,
+      "firstMessageDate": "2024-10-23T02:37:37.632821+03:00"
+    },
+    {
+      "Id": 257771372,
+      "Name": "Alexander",
+      "TelegramUsername": "SuperWeapon",
+      "lastMessage": "/random_comedy@cinema_nights_bot",
+      "lastMessageDate": null,
+      "lastMovie": null,
+      "firstMessageDate": "2024-10-23T02:37:37.632821+03:00"
+    },
+    {
+      "Id": 257771372,
+      "Name": "Alexander",
+      "TelegramUsername": "SuperWeapon",
+      "lastMessage": "/random_comedy@cinema_nights_bot",
+      "lastMessageDate": null,
+      "lastMovie": null,
+      "firstMessageDate": "2024-10-23T02:37:37.632821+03:00"
+    },
+    {
+      "Id": 257771372,
+      "Name": "Alexander",
+      "TelegramUsername": "SuperWeapon",
+      "lastMessage": "/random_comedy@cinema_nights_bot",
+      "lastMessageDate": null,
+      "lastMovie": null,
+      "firstMessageDate": "2024-10-23T02:37:37.632821+03:00"
+    },
+    {
+      "Id": 257771372,
+      "Name": "Alexander",
+      "TelegramUsername": "SuperWeapon",
+      "lastMessage": "/random_comedy@cinema_nights_bot",
+      "lastMessageDate": null,
+      "lastMovie": null,
+      "firstMessageDate": "2024-10-23T02:37:37.632821+03:00"
+    },
+    {
+      "Id": 257771372,
+      "Name": "Alexander",
+      "TelegramUsername": "SuperWeapon",
+      "lastMessage": "/random_comedy@cinema_nights_bot",
+      "lastMessageDate": null,
+      "lastMovie": null,
+      "firstMessageDate": "2024-10-23T02:37:37.632821+03:00"
+    },
+    {
+      "Id": 257771372,
+      "Name": "Alexander",
+      "TelegramUsername": "SuperWeapon",
+      "lastMessage": "/random_comedy@cinema_nights_bot",
+      "lastMessageDate": null,
+      "lastMovie": null,
+      "firstMessageDate": "2024-10-23T02:37:37.632821+03:00"
+    },
+    {
+      "Id": 347364314,
+      "Name": "Alexandr",
+      "TelegramUsername": "eclipssss",
+      "lastMessage": "The Substance",
+      "lastMessageDate": null,
+      "lastMovie": null,
+      "firstMessageDate": "2024-10-25T16:16:23.30422+03:00"
     }
   ],
   "weekCinemaMovies": [
@@ -972,6 +1104,693 @@
           "Chase Watson"
         ]
       }
+    },
+    {
+      "MovieDetails": {
+        "adult": false,
+        "backdrop_path": "/vsrB0FFF96fPrdFGPzcnJo6dGsZ.jpg",
+        "genre_ids": [
+          35
+        ],
+        "id": 10986,
+        "original_language": "it",
+        "original_title": "Il bisbetico domato",
+        "overview": "A rich farmer is well known for being very unkind. He's misanthropic, misogynous and cantankerous. Until he meets by chance a gorgeous girl...",
+        "popularity": 20.377,
+        "poster_path": "/3B5MA242hHcnpf54hGWKbVovPmX.jpg",
+        "release_date": "1980-12-20",
+        "title": "The Taming of the Scoundrel",
+        "video": false,
+        "vote_average": 7.116,
+        "vote_count": 454
+      },
+      "MovieTrailer": "https://www.youtube.com/watch?v=1GT3cSCpwyY",
+      "MovieImages": [
+        "https://image.tmdb.org/t/p/w500/4cDTwuuT8Zyl7zPSRltDIlMBO17.jpg",
+        "https://image.tmdb.org/t/p/w500/m1VN4QiornOyjkVo6xQwDqc45fA.jpg",
+        "https://image.tmdb.org/t/p/w500/2XQI6SRLzY8ctSKnXGPz47YHQ2W.jpg",
+        "https://image.tmdb.org/t/p/w500/ndH6BnGyH6GkQwTPGmmKAUUopjY.jpg",
+        "https://image.tmdb.org/t/p/w500/s17SywYrRsEPUzZEtPPD2eMiXrw.jpg",
+        "https://image.tmdb.org/t/p/w500/efbUY7OM6l7tqn9UHNjbwDtdxoY.jpg"
+      ],
+      "Credits": {
+        "Director": [
+          "Castellano",
+          "Pipolo"
+        ],
+        "Cast": [
+          "Adriano Celentano",
+          "Ornella Muti",
+          "Edith Peters",
+          "Pippo Santonastaso",
+          "Jimmy il Fenomeno",
+          "Milly Carlucci",
+          "Sandro Ghiani",
+          "Nicola De Buono",
+          "Marco Columbro",
+          "Vincenzo De Toma",
+          "Guido Spadea",
+          "Gianni Coletto",
+          "Raffaele di Sipio",
+          "Gianni Franco",
+          "Maurizio Fardo",
+          "Massimo Mirani"
+        ]
+      }
+    },
+    {
+      "MovieDetails": {
+        "adult": false,
+        "backdrop_path": "/vsrB0FFF96fPrdFGPzcnJo6dGsZ.jpg",
+        "genre_ids": [
+          35
+        ],
+        "id": 10986,
+        "original_language": "it",
+        "original_title": "Il bisbetico domato",
+        "overview": "A rich farmer is well known for being very unkind. He's misanthropic, misogynous and cantankerous. Until he meets by chance a gorgeous girl...",
+        "popularity": 20.377,
+        "poster_path": "/3B5MA242hHcnpf54hGWKbVovPmX.jpg",
+        "release_date": "1980-12-20",
+        "title": "The Taming of the Scoundrel",
+        "video": false,
+        "vote_average": 7.116,
+        "vote_count": 454
+      },
+      "MovieTrailer": "https://www.youtube.com/watch?v=1GT3cSCpwyY",
+      "MovieImages": [
+        "https://image.tmdb.org/t/p/w500/4cDTwuuT8Zyl7zPSRltDIlMBO17.jpg",
+        "https://image.tmdb.org/t/p/w500/m1VN4QiornOyjkVo6xQwDqc45fA.jpg",
+        "https://image.tmdb.org/t/p/w500/2XQI6SRLzY8ctSKnXGPz47YHQ2W.jpg",
+        "https://image.tmdb.org/t/p/w500/ndH6BnGyH6GkQwTPGmmKAUUopjY.jpg",
+        "https://image.tmdb.org/t/p/w500/s17SywYrRsEPUzZEtPPD2eMiXrw.jpg",
+        "https://image.tmdb.org/t/p/w500/efbUY7OM6l7tqn9UHNjbwDtdxoY.jpg"
+      ],
+      "Credits": {
+        "Director": [
+          "Castellano",
+          "Pipolo"
+        ],
+        "Cast": [
+          "Adriano Celentano",
+          "Ornella Muti",
+          "Edith Peters",
+          "Pippo Santonastaso",
+          "Jimmy il Fenomeno",
+          "Milly Carlucci",
+          "Sandro Ghiani",
+          "Nicola De Buono",
+          "Marco Columbro",
+          "Vincenzo De Toma",
+          "Guido Spadea",
+          "Gianni Coletto",
+          "Raffaele di Sipio",
+          "Gianni Franco",
+          "Maurizio Fardo",
+          "Massimo Mirani"
+        ]
+      }
+    },
+    {
+      "MovieDetails": {
+        "adult": false,
+        "backdrop_path": "/vsrB0FFF96fPrdFGPzcnJo6dGsZ.jpg",
+        "genre_ids": [
+          35
+        ],
+        "id": 10986,
+        "original_language": "it",
+        "original_title": "Il bisbetico domato",
+        "overview": "A rich farmer is well known for being very unkind. He's misanthropic, misogynous and cantankerous. Until he meets by chance a gorgeous girl...",
+        "popularity": 20.377,
+        "poster_path": "/3B5MA242hHcnpf54hGWKbVovPmX.jpg",
+        "release_date": "1980-12-20",
+        "title": "The Taming of the Scoundrel",
+        "video": false,
+        "vote_average": 7.116,
+        "vote_count": 454
+      },
+      "MovieTrailer": "https://www.youtube.com/watch?v=1GT3cSCpwyY",
+      "MovieImages": [
+        "https://image.tmdb.org/t/p/w500/4cDTwuuT8Zyl7zPSRltDIlMBO17.jpg",
+        "https://image.tmdb.org/t/p/w500/m1VN4QiornOyjkVo6xQwDqc45fA.jpg",
+        "https://image.tmdb.org/t/p/w500/2XQI6SRLzY8ctSKnXGPz47YHQ2W.jpg",
+        "https://image.tmdb.org/t/p/w500/ndH6BnGyH6GkQwTPGmmKAUUopjY.jpg",
+        "https://image.tmdb.org/t/p/w500/s17SywYrRsEPUzZEtPPD2eMiXrw.jpg",
+        "https://image.tmdb.org/t/p/w500/efbUY7OM6l7tqn9UHNjbwDtdxoY.jpg"
+      ],
+      "Credits": {
+        "Director": [
+          "Castellano",
+          "Pipolo"
+        ],
+        "Cast": [
+          "Adriano Celentano",
+          "Ornella Muti",
+          "Edith Peters",
+          "Pippo Santonastaso",
+          "Jimmy il Fenomeno",
+          "Milly Carlucci",
+          "Sandro Ghiani",
+          "Nicola De Buono",
+          "Marco Columbro",
+          "Vincenzo De Toma",
+          "Guido Spadea",
+          "Gianni Coletto",
+          "Raffaele di Sipio",
+          "Gianni Franco",
+          "Maurizio Fardo",
+          "Massimo Mirani"
+        ]
+      }
+    },
+    {
+      "MovieDetails": {
+        "adult": false,
+        "backdrop_path": "/vsrB0FFF96fPrdFGPzcnJo6dGsZ.jpg",
+        "genre_ids": [
+          35
+        ],
+        "id": 10986,
+        "original_language": "it",
+        "original_title": "Il bisbetico domato",
+        "overview": "A rich farmer is well known for being very unkind. He's misanthropic, misogynous and cantankerous. Until he meets by chance a gorgeous girl...",
+        "popularity": 20.377,
+        "poster_path": "/3B5MA242hHcnpf54hGWKbVovPmX.jpg",
+        "release_date": "1980-12-20",
+        "title": "The Taming of the Scoundrel",
+        "video": false,
+        "vote_average": 7.116,
+        "vote_count": 454
+      },
+      "MovieTrailer": "https://www.youtube.com/watch?v=1GT3cSCpwyY",
+      "MovieImages": [
+        "https://image.tmdb.org/t/p/w500/4cDTwuuT8Zyl7zPSRltDIlMBO17.jpg",
+        "https://image.tmdb.org/t/p/w500/m1VN4QiornOyjkVo6xQwDqc45fA.jpg",
+        "https://image.tmdb.org/t/p/w500/2XQI6SRLzY8ctSKnXGPz47YHQ2W.jpg",
+        "https://image.tmdb.org/t/p/w500/ndH6BnGyH6GkQwTPGmmKAUUopjY.jpg",
+        "https://image.tmdb.org/t/p/w500/s17SywYrRsEPUzZEtPPD2eMiXrw.jpg",
+        "https://image.tmdb.org/t/p/w500/efbUY7OM6l7tqn9UHNjbwDtdxoY.jpg"
+      ],
+      "Credits": {
+        "Director": [
+          "Castellano",
+          "Pipolo"
+        ],
+        "Cast": [
+          "Adriano Celentano",
+          "Ornella Muti",
+          "Edith Peters",
+          "Pippo Santonastaso",
+          "Jimmy il Fenomeno",
+          "Milly Carlucci",
+          "Sandro Ghiani",
+          "Nicola De Buono",
+          "Marco Columbro",
+          "Vincenzo De Toma",
+          "Guido Spadea",
+          "Gianni Coletto",
+          "Raffaele di Sipio",
+          "Gianni Franco",
+          "Maurizio Fardo",
+          "Massimo Mirani"
+        ]
+      }
+    },
+    {
+      "MovieDetails": {
+        "adult": false,
+        "backdrop_path": "/e74H6yfw9qh8uEJP3yVUfWlMvxe.jpg",
+        "genre_ids": [
+          18,
+          10749
+        ],
+        "id": 109689,
+        "original_language": "es",
+        "original_title": "Tengo ganas de ti",
+        "overview": "The sexy Gin is the new love of Hache, but this can not forget his former girlfriend, so the love triangle is inevitable.",
+        "popularity": 43.69,
+        "poster_path": "/z13I3sWzOoKBDAEpJ7iK9bSznQn.jpg",
+        "release_date": "2012-06-22",
+        "title": "I Want You",
+        "video": false,
+        "vote_average": 7.434,
+        "vote_count": 1866
+      },
+      "MovieTrailer": "https://www.youtube.com/watch?v=6YCc-ywRQK8",
+      "MovieImages": [
+        "https://image.tmdb.org/t/p/w500/z13I3sWzOoKBDAEpJ7iK9bSznQn.jpg",
+        "https://image.tmdb.org/t/p/w500/smwdyNSSXABUQwCT1DQnNTwkk1Z.jpg",
+        "https://image.tmdb.org/t/p/w500/tPwomjp1r5NatHawRRkNF59QqX7.jpg",
+        "https://image.tmdb.org/t/p/w500/tO1j2vycrW2qspjLCIoCgIrCFYr.jpg",
+        "https://image.tmdb.org/t/p/w500/oZUQ98zjt8JElzALmy75CcM1Sz7.jpg",
+        "https://image.tmdb.org/t/p/w500/xoqbtjnHCx6u93xFRYm1TtWqlYr.jpg"
+      ],
+      "Credits": {
+        "Director": [
+          "Fernando González Molina"
+        ],
+        "Cast": [
+          "Mario Casas",
+          "Clara Lago",
+          "María Valverde",
+          "Álvaro Cervantes",
+          "Diego Martín",
+          "Marina Salas",
+          "Cristina Plazas",
+          "Nerea Camacho",
+          "Marcel Borràs",
+          "Carles Francino",
+          "Antonio Velázquez",
+          "Laia Costa",
+          "Ferran Vilajosana",
+          "Andrea Ros",
+          "Carme Elias",
+          "Jordi Bosch",
+          "Luis Fernández",
+          "Manu Fullola",
+          "Andrew Tarbet",
+          "Joan Crosas",
+          "Ismael Martínez",
+          "Víctor Sevilla",
+          "Daniel Casadellà",
+          "Jorge Gudiel",
+          "Gerardo Peña",
+          "Juan Antonio del Fresno",
+          "Lina Forero",
+          "Josep Palau",
+          "Albert Suárez",
+          "Mirko Luccarelli",
+          "Itziar Lazkano",
+          "Berta Cortés",
+          "Pere Brasó",
+          "Bella Agossou",
+          "Silvia Álvarez",
+          "Ramón Moreno",
+          "Toni Martínez",
+          "Laura Alonso",
+          "Joan Carles Suau",
+          "Oscar Foronda",
+          "Iván Valentín",
+          "Vicent Gavara",
+          "Isabel Llanos",
+          "Berta Regot"
+        ]
+      }
+    },
+    {
+      "MovieDetails": {
+        "adult": false,
+        "backdrop_path": "/vIgyYkXkg6NC2whRbYjBD7eb3Er.jpg",
+        "genre_ids": [
+          878,
+          28,
+          12
+        ],
+        "id": 580489,
+        "original_language": "en",
+        "original_title": "Venom: Let There Be Carnage",
+        "overview": "After finding a host body in investigative reporter Eddie Brock, the alien symbiote must face a new enemy, Carnage, the alter ego of serial killer Cletus Kasady.",
+        "popularity": 372.317,
+        "poster_path": "/1MJNcPZy46hIy2CmSqOeru0yr5C.jpg",
+        "release_date": "2021-09-30",
+        "title": "Venom: Let There Be Carnage",
+        "video": false,
+        "vote_average": 6.8,
+        "vote_count": 9994
+      },
+      "MovieTrailer": "https://www.youtube.com/watch?v=GVwq2HlKYpE",
+      "MovieImages": [
+        "https://image.tmdb.org/t/p/w500/h5UzYZquMwO9FVn15R2eK2itmHu.jpg",
+        "https://image.tmdb.org/t/p/w500/fBXLfLm2R6bK7mByB6sxEpKf34A.jpg",
+        "https://image.tmdb.org/t/p/w500/g1cYSQuk3q6oruHSUYzSBsWk9kF.jpg",
+        "https://image.tmdb.org/t/p/w500/dMVNFtqROyhEexUD4jvkfhAx4b8.jpg",
+        "https://image.tmdb.org/t/p/w500/lHLFJqU88p1z8QP0R6dEpFaFogV.jpg",
+        "https://image.tmdb.org/t/p/w500/v0fS32nR4XJke433GBNu6KkZ8LH.jpg"
+      ],
+      "Credits": {
+        "Director": [
+          "Andy Serkis"
+        ],
+        "Cast": [
+          "Tom Hardy",
+          "Woody Harrelson",
+          "Michelle Williams",
+          "Naomie Harris",
+          "Reid Scott",
+          "Stephen Graham",
+          "Peggy Lu",
+          "Sian Webber",
+          "Michelle Greenidge",
+          "Rob Bowen",
+          "Laurence Spellman",
+          "Little Simz",
+          "Jack Bandeira",
+          "Olumide Olorunfemi",
+          "Scroobius Pip",
+          "Amrou Al-Kadhi",
+          "Beau Sargent",
+          "Brian Copeland",
+          "Stewart Alexander",
+          "Sean Delaney",
+          "Ed Kear",
+          "Emma Lau",
+          "Louis j Rhone",
+          "Christopher Godwin",
+          "Tiffanie Thomas",
+          "Rocky Capella",
+          "Sam Robinson",
+          "Greg Lockett",
+          "Sonny Ashbourne Serkis",
+          "Otis Winston",
+          "Vaughn Johseph",
+          "Kristen Simoes",
+          "Miguel Angel Arreguin",
+          "Shaliz Afshar",
+          "Reece Shearsmith",
+          "Simon Connolly",
+          "Rachel Handshaw",
+          "Amanda Foster",
+          "Akie Kotabe",
+          "Eric Sigmundsson",
+          "Chabris Napier-Lawrence",
+          "Larry Olubamiwo",
+          "Jose Palma",
+          "Ashlen Aquila",
+          "Jamal Ajala",
+          "James D. Weston II",
+          "Che Amaro",
+          "Joshua Eldridge-Smith",
+          "Rosie Marcel",
+          "Elliot Cable",
+          "J.K. Simmons",
+          "Tom Holland",
+          "David Zepeda",
+          "Jason McNab"
+        ]
+      }
+    },
+    {
+      "MovieDetails": {
+        "adult": false,
+        "backdrop_path": "/cWczNud8Y8i8ab0Z4bxos4myWYO.jpg",
+        "genre_ids": [
+          16,
+          10751
+        ],
+        "id": 38757,
+        "original_language": "en",
+        "original_title": "Tangled",
+        "overview": "Feisty teenager Rapunzel, who has long and magical hair, wants to go and see sky lanterns on her eighteenth birthday, but she's bound to a tower by her overprotective mother. She strikes a deal with Flynn Rider, a charming wanted thief, and the duo set off on an action-packed escapade.",
+        "popularity": 111.238,
+        "poster_path": "/ym7Kst6a4uodryxqbGOxmewF235.jpg",
+        "release_date": "2010-11-24",
+        "title": "Tangled",
+        "video": false,
+        "vote_average": 7.607,
+        "vote_count": 11363
+      },
+      "MovieTrailer": "https://www.youtube.com/watch?v=hsJFEqOL1UI",
+      "MovieImages": [
+        "https://image.tmdb.org/t/p/w500/stucDtFt7nDYlQqd37wFs1yVEnQ.jpg",
+        "https://image.tmdb.org/t/p/w500/fbFIr2tgkf0lgNKmITK1Vu3PKqq.jpg",
+        "https://image.tmdb.org/t/p/w500/uempOC5vHT4umXFP5trXpV1KTeu.jpg",
+        "https://image.tmdb.org/t/p/w500/tT22CvxTfxmQvZodon7ZCWnsKIC.jpg",
+        "https://image.tmdb.org/t/p/w500/xajyxfYkbIQqIYrGUatMPLjD8UG.jpg",
+        "https://image.tmdb.org/t/p/w500/uz1xxDQmocThPOtssDicgBhobgx.jpg"
+      ],
+      "Credits": {
+        "Director": [
+          "Nathan Greno",
+          "Byron Howard"
+        ],
+        "Cast": [
+          "Mandy Moore",
+          "Zachary Levi",
+          "Donna Murphy",
+          "Ron Perlman",
+          "Brad Garrett",
+          "Richard Kiel",
+          "M.C. Gainey",
+          "Jeffrey Tambor",
+          "Paul F. Tompkins",
+          "Delaney Rose Stein",
+          "Nathan Greno",
+          "Byron Howard",
+          "Tim Mertens",
+          "Michael Bell",
+          "Bob Bergen",
+          "Susanne Blakeslee",
+          "Roy Conli",
+          "David Cowgill",
+          "Terri Douglas",
+          "Chad Einbinder",
+          "Pat Fraley",
+          "Eddie Frierson",
+          "Jackie Gonneau",
+          "Nicholas Guest",
+          "Bridget Hoffman",
+          "Daniel Kaz",
+          "Anne Lockhart",
+          "Mona Marshall",
+          "Scott Menville",
+          "Laraine Newman",
+          "Paul Pape",
+          "Lynwood Robinson",
+          "Fred Tatasciore",
+          "Hynden Walch",
+          "Kari Wahlgren",
+          "June Christopher"
+        ]
+      }
+    },
+    {
+      "MovieDetails": {
+        "adult": false,
+        "backdrop_path": "/o4mQHoP8LExn2Q9dn16OGqHvaiK.jpg",
+        "genre_ids": [
+          12,
+          18,
+          10751
+        ],
+        "id": 1265,
+        "original_language": "en",
+        "original_title": "Bridge to Terabithia",
+        "overview": "Jesse Aarons trained all summer to become the fastest runner in school. So he's very upset when newcomer Leslie Burke outruns him and everyone else. Despite this and other differences including that she's rich, he's poor, she's a city girl, and he's a country boy the two become fast friends. Together they create Terabithia, a land of monsters, trolls, ogres, and giants where they rule as king and queen.",
+        "popularity": 54.005,
+        "poster_path": "/3xFxGodKPMFLheS8rujFSmLfcq4.jpg",
+        "release_date": "2007-02-15",
+        "title": "Bridge to Terabithia",
+        "video": false,
+        "vote_average": 7.3,
+        "vote_count": 4742
+      },
+      "MovieTrailer": "https://www.youtube.com/watch?v=T2TDSEG57hI",
+      "MovieImages": [
+        "https://image.tmdb.org/t/p/w500/f1B8wY7biJvqz3ieOItZygszRuv.jpg",
+        "https://image.tmdb.org/t/p/w500/uakG4tIrBvixkKe7OGUXJRVNB8Z.jpg",
+        "https://image.tmdb.org/t/p/w500/IB8AT9zhsjvOk1bx43J12eER8w.jpg",
+        "https://image.tmdb.org/t/p/w500/wRhdhpi7uP80Fc5kLL5ZqZRwK2m.jpg",
+        "https://image.tmdb.org/t/p/w500/wKdOKbjqDqlgvepIPfveyGAfweo.jpg",
+        "https://image.tmdb.org/t/p/w500/3HVCeN8jQ6x2301pcrYvS1t0guH.jpg"
+      ],
+      "Credits": {
+        "Director": [
+          "Gábor Csupó"
+        ],
+        "Cast": [
+          "Josh Hutcherson",
+          "AnnaSophia Robb",
+          "Zooey Deschanel",
+          "Robert Patrick",
+          "Bailee Madison",
+          "Kate Butler",
+          "Devon Wood",
+          "Emma Fenton",
+          "Grace Brannigan",
+          "Latham Gaines",
+          "Judy McIntosh",
+          "Patricia Aldersley",
+          "Lauren Clinton",
+          "Isabelle Rose Kircher",
+          "Cameron Wakefield",
+          "Elliot Lawless",
+          "Carly Owen",
+          "Jen Wolfe",
+          "James Gaylyn",
+          "Ian Harcourt",
+          "Brandon Cook",
+          "Tyler Atfield",
+          "Maisy McLeod-Riera",
+          "Hudson Mills",
+          "Matt Gibbons",
+          "Phil Grieve",
+          "Zoe Cramond"
+        ]
+      }
+    },
+    {
+      "MovieDetails": {
+        "adult": false,
+        "backdrop_path": "/9aUcoMDARruvlgC0MQXLCsznqbp.jpg",
+        "genre_ids": [
+          18,
+          99
+        ],
+        "id": 537971,
+        "original_language": "es",
+        "original_title": "Mia",
+        "overview": "Mia recounts her most intimate confessions, uncensored, in her first approach to a totally new world of domination and submission.",
+        "popularity": 35.678,
+        "poster_path": "/nEmw1fZOQp2qFGdrak3ipCbe31G.jpg",
+        "release_date": "2017-12-17",
+        "title": "Mia",
+        "video": false,
+        "vote_average": 6.3,
+        "vote_count": 24
+      },
+      "MovieTrailer": null,
+      "MovieImages": [
+        "https://image.tmdb.org/t/p/w500/nEmw1fZOQp2qFGdrak3ipCbe31G.jpg",
+        "https://image.tmdb.org/t/p/w500/9O0ZsPqpMaIPTyzDywD9HO7eZV8.jpg",
+        "https://image.tmdb.org/t/p/w500/oHACB4AVImWqhGJJZrCEIvNxi8l.jpg",
+        "https://image.tmdb.org/t/p/w500/j2PHw1Kw8KmpqINJ7AKGjpuoSvF.jpg",
+        "https://image.tmdb.org/t/p/w500/w5Xzcc8Ty6v9DNtqZYlJK6aKjDF.jpg",
+        "https://image.tmdb.org/t/p/w500/k5AhFiNH6ohc7Pwg8P83CEGScK0.jpg"
+      ],
+      "Credits": {
+        "Director": [
+          "Oriol Colomar"
+        ],
+        "Cast": [
+          "Aya Wolf",
+          "Oriol Colomar"
+        ]
+      }
+    },
+    {
+      "MovieDetails": {
+        "adult": false,
+        "backdrop_path": "/7h6TqPB3ESmjuVbxCxAeB1c9OB1.jpg",
+        "genre_ids": [
+          27,
+          18,
+          878
+        ],
+        "id": 933260,
+        "original_language": "en",
+        "original_title": "The Substance",
+        "overview": "A fading celebrity decides to use a black market drug, a cell-replicating substance that temporarily creates a younger, better version of herself.",
+        "popularity": 2641.055,
+        "poster_path": "/lqoMzCcZYEFK729d6qzt349fB4o.jpg",
+        "release_date": "2024-09-07",
+        "title": "The Substance",
+        "video": false,
+        "vote_average": 7.3,
+        "vote_count": 855
+      },
+      "MovieTrailer": "https://www.youtube.com/watch?v=LNlrGhBpYjc",
+      "MovieImages": [
+        "https://image.tmdb.org/t/p/w500/lqoMzCcZYEFK729d6qzt349fB4o.jpg",
+        "https://image.tmdb.org/t/p/w500/wNSmkLUsQ2AxToPnfA3fq02vSUK.jpg",
+        "https://image.tmdb.org/t/p/w500/vHUTvtgm5BJuJgMdCacbpTqecVg.jpg",
+        "https://image.tmdb.org/t/p/w500/mZxsN0bf6Ib2xIz25dxXQRyphlw.jpg",
+        "https://image.tmdb.org/t/p/w500/l4ytZEVGeFKphTGtFgrw2lCBe5e.jpg",
+        "https://image.tmdb.org/t/p/w500/32DyfprhjiqVmJbdtLRaVo5gzyr.jpg"
+      ],
+      "Credits": {
+        "Director": [
+          "Coralie Fargeat"
+        ],
+        "Cast": [
+          "Demi Moore",
+          "Margaret Qualley",
+          "Dennis Quaid",
+          "Edward Hamilton-Clark",
+          "Gore Abrams",
+          "Oscar Lesage",
+          "Christian Erickson",
+          "Robin Greer",
+          "Tom Morton",
+          "Hugo Diego Garcia",
+          "Daniel Knight",
+          "Jonathon Carley",
+          "Jiselle Henderkott",
+          "Akil Wingate",
+          "Vincent Colombe",
+          "Billy Bentley",
+          "Lennard Ridsdale",
+          "Jordan Ford Silver",
+          "Oscar Salem",
+          "Viviane Bossina",
+          "Matthew Luret",
+          "Jana Bittnerová",
+          "Olivier Raynal",
+          "Tiffany Hofstetter",
+          "Nicolas Royer",
+          "Nathan Rippy",
+          "Manon Arizmendi",
+          "Virginie Kotlinski",
+          "Brett Gillen",
+          "Charlotte Marquardt",
+          "Léa Hengl",
+          "Gaëlle Raymond",
+          "Claire Lemaire",
+          "Lila Boughoufala",
+          "Aurélien Lorgnier",
+          "Ivan Sellier",
+          "Philip Schurer",
+          "Christian Bourmier",
+          "Martin Graham",
+          "Christian Bordeleau",
+          "Patrick Hamel",
+          "Didier D'Hondt",
+          "Jacques-Yves Dorges",
+          "Jean-Claude Matthey",
+          "Olivier Jarcin",
+          "Jean-Luc Magneron",
+          "Charlotte Murray",
+          "Aaron Kahn",
+          "Gabriela Arnon",
+          "Nancy Josephson Lahoussine",
+          "Andrew Eldridge",
+          "Denise Powers",
+          "Bryan Jones",
+          "Adam Carage",
+          "Maria McClurg",
+          "Andrew Desmond",
+          "Rebecca Lafont",
+          "Laura Puech",
+          "Ryan Chidester",
+          "Céline Vogt",
+          "Yannick Guérin",
+          "Jean Miel",
+          "Paul Descoings",
+          "Benoit Lévêque",
+          "Arthur Molinet",
+          "Manon Sachot",
+          "Bastien Jorelle",
+          "Kelly Hoarau",
+          "Michel Juskiewicz",
+          "Louise Greggory",
+          "Christophe Sartirano",
+          "Florent Torres",
+          "Romain Caldeira",
+          "Barthelemy Thomas",
+          "Axel Baille",
+          "Yann Bean",
+          "Ashley Lambert",
+          "Ranjani Brow",
+          "Chase Fein",
+          "Shane Sweet",
+          "William Calvert",
+          "Michael Corbett",
+          "Stephen Apostolina",
+          "Matthew Géczy",
+          "Namory Bakayoko",
+          "Gregory Defleur"
+        ]
+      }
     }
   ],
   "chatIDMessageIDDictionary": {
@@ -988,9 +1807,21 @@
       2728,
       2738,
       2748,
-      2758
+      2758,
+      2768,
+      2771,
+      2774,
+      2777,
+      2780,
+      2790,
+      2799,
+      2808,
+      2818
+    ],
+    "-1001921095321": [
+      809
     ]
   },
   "lastPollId": null,
-  "mainChatId": -1002043973375
+  "mainChatId": -1001921095321
 }
