@@ -1,19 +1,17 @@
-# Stage 1: Build
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-# Копируем CSPROJ и восстанавливаем зависимости
-COPY App.csproj ./
-RUN dotnet build
-
-# Копируем остальные файлы и собираем приложение
+# Copy everything
 COPY . ./
+
+# Restore as distinct layers
+RUN dotnet restore
+
+# Build and publish a release
 RUN dotnet publish -c Release -o out
 
-# Stage 2: Run
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
-WORKDIR /app
-COPY --from=build-env /app/out .
 
-# Устанавливаем точку входа
-ENTRYPOINT ["dotnet", "out.dll"]
+FROM mcr.microsoft.com/dotnet/runtime:8.0
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT ./App

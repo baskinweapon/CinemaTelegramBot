@@ -1,0 +1,8 @@
+services:
+  cinemabot:
+    image: cinemabot:v0
+    container_name: cinemabot
+    restart: always
+    volumes:
+      - ./saves.json:/app/saves.json
+    command: ./App

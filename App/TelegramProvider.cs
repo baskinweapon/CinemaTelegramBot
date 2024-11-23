@@ -92,25 +92,38 @@ public class TelegramProvider {
         
         using CancellationTokenSource cts = new ();
 
-        // StartReceiving does not block the caller thread. Receiving is done on the ThreadPool.
-        ReceiverOptions receiverOptions = new () {
-            AllowedUpdates = Array.Empty<UpdateType>() // receive all update types except ChatMember related updates
+        // Keep the application alive until a shutdown signal is received
+        AppDomain.CurrentDomain.ProcessExit += (_, __) => cts.Cancel();
+        Console.CancelKeyPress += (_, __) =>
+        {
+            cts.Cancel();
+            __.Cancel = true; // Prevent immediate termination
         };
-        
-        bot.StartReceiving(
-            updateHandler: HandleUpdateAsync,
-            pollingErrorHandler: HandlePollingErrorAsync,
-            receiverOptions: receiverOptions,
-            cancellationToken: cts.Token
-        );
 
-        var me = await bot.GetMeAsync(cancellationToken: cts.Token);
-        
-        Console.WriteLine($"Start listening for @{me.Username}");
-        Console.ReadLine();
-        
-        // Send cancellation request to stop bot
-        await cts.CancelAsync();
+        try {
+            // StartReceiving does not block the caller thread. Receiving is done on the ThreadPool.
+            ReceiverOptions receiverOptions = new () {
+                AllowedUpdates = Array.Empty<UpdateType>() // receive all update types except ChatMember related updates
+            };
+            
+            bot.StartReceiving(
+                updateHandler: HandleUpdateAsync,
+                pollingErrorHandler: HandlePollingErrorAsync,
+                receiverOptions: receiverOptions,
+                cancellationToken: cts.Token
+            );
+
+            var me = await bot.GetMeAsync(cancellationToken: cts.Token);
+            
+            Console.WriteLine($"Start listening for @{me.Username}");
+
+            // Keep running until canceled
+            await Task.Delay(Timeout.Infinite, cts.Token);
+        }
+        finally {
+            Console.WriteLine("Shutting down bot...");
+            await cts.CancelAsync(); // Signal cancellation
+        }
     }
     
     Task HandlePollingErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
