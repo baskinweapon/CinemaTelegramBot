@@ -64,7 +64,7 @@ public class AnswerFacade {
     
     private async void SendToWeekMovies(Message message) {
         if (!Mode.IsDev && DataBase.Instance.GetWeekCinemaUsers().Any(user => user.Id == message.From.Id)) {
-            await TelegramProvider.Instance.bot.SendTextMessageAsync(message.Chat.Id, _warningMessage, message.MessageThreadId, ParseMode.Html);
+            await TelegramProvider.Instance.bot.SendMessage(message.Chat.Id, _warningMessage, messageThreadId: message.MessageThreadId, parseMode: ParseMode.Html);
             return;
         }
         
@@ -80,20 +80,20 @@ public class AnswerFacade {
                 }
             }
             
-            var m = await TelegramProvider.Instance.bot.SendTextMessageAsync(
-                message.Chat.Id, $"🎥🍿 <strong>Find random movie</strong>. 🍿🎥", message.MessageThreadId, ParseMode.Html);
+            var m = await TelegramProvider.Instance.bot.SendMessage(
+                message.Chat.Id, $"🎥🍿 <strong>Find random movie</strong>. 🍿🎥", messageThreadId: message.MessageThreadId, parseMode: ParseMode.Html);
             message.Text = movieName;
             DeleteMessage(m);
         }
         else {
-            var m = await TelegramProvider.Instance.bot.SendTextMessageAsync(
-                message.Chat.Id, $"Try to find your movie. \n 🎥🍿 <strong>{message.Text.Trim()}</strong>. 🍿🎥", message.MessageThreadId, ParseMode.Html);
+            var m = await TelegramProvider.Instance.bot.SendMessage(
+                message.Chat.Id, $"Try to find your movie. \n 🎥🍿 <strong>{message.Text.Trim()}</strong>. 🍿🎥",messageThreadId: message.MessageThreadId, parseMode: ParseMode.Html);
             DeleteMessage(m);
         }
         
         
         var stickerId = new InputFileId(StickerPack.GetRandomSticker());
-        var l = await TelegramProvider.Instance.bot.SendStickerAsync(message.Chat.Id, stickerId, message.MessageThreadId);
+        var l = await TelegramProvider.Instance.bot.SendSticker(message.Chat.Id, stickerId, message.MessageThreadId);
         DeleteMessage(l);
 
         DeleteMessage(message, 100);
@@ -102,7 +102,7 @@ public class AnswerFacade {
         var movie = await new TMDBAPI().SearchMovies(message.Text.Trim());
         
         if (movie == null) {
-            var mes = await TelegramProvider.Instance.bot.SendTextMessageAsync(message.Chat.Id, $"🤨 <strong>I can't find your film {message.Text} </strong> 🤨", message.MessageThreadId, ParseMode.Html);
+            var mes = await TelegramProvider.Instance.bot.SendMessage(message.Chat.Id, $"🤨 <strong>I can't find your film {message.Text} </strong> 🤨", messageThreadId: message.MessageThreadId, parseMode: ParseMode.Html);
             DeleteMessage(mes, 10);
         } else {
             FindCinemaBehavior.SendAboutFilm(movie, message.Chat.Id, message.From.Username, message.MessageThreadId);
@@ -116,7 +116,7 @@ public class AnswerFacade {
     
     private async void DeleteMessage(Message message, int time = 2) {
         await Task.Delay(time * 1000);
-        await TelegramProvider.Instance.bot.DeleteMessageAsync(message.Chat.Id, message.MessageId);
+        await TelegramProvider.Instance.bot.DeleteMessage(message.Chat.Id, message.MessageId);
     }
 
 

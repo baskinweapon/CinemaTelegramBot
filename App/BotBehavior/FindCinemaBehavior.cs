@@ -18,21 +18,21 @@ public static class FindCinemaBehavior {
         
         Message ms;
         if (movie.MovieImages == null || movie.MovieImages.Length == 0) {
-            ms = await TelegramProvider.Instance.bot.SendTextMessageAsync(
+            ms = await TelegramProvider.Instance.bot.SendMessage(
                 chatId: chatId,
                 text: message,
                 parseMode: ParseMode.Html,
-                replyToMessageId: messageThreadId
+                messageThreadId: messageThreadId
             );
             DataBase.Instance.AddMovieMessageIdDictionary(ms.MessageId, new[] { message, addition });
             return;
         }
         
-        ms = await TelegramProvider.Instance.bot.SendPhotoAsync(
+        ms = await TelegramProvider.Instance.bot.SendPhoto(
             chatId: chatId,
             photo: new InputFileUrl(movie.MovieImages[0]),
             caption: message,
-            replyToMessageId: messageThreadId,
+            messageThreadId: messageThreadId,
             parseMode: ParseMode.Html,
             replyMarkup: new InlineKeyboardMarkup(TelegramProvider.Instance.additionButton)
         );
@@ -55,11 +55,11 @@ public static class FindCinemaBehavior {
         
         var response = await new ChatAI().SendLastMessage(movie.MovieDetails.original_title);
         response += "\n\n" + "🎥🍿 <strong>---NEXT---</strong>🍿🎥";
-        await TelegramProvider.Instance.bot.SendVideoAsync(
+        await TelegramProvider.Instance.bot.SendVideo(
             chatId: chatId,
             video: new InputFileStream(fs),
             caption: response,
-            replyToMessageId: messageThreadId,
+            messageThreadId: messageThreadId,
             parseMode: ParseMode.Html,
             supportsStreaming: true
         );

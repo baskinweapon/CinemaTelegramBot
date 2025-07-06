@@ -15,15 +15,15 @@ public class TelegramProvider {
 
     public TelegramBotClient bot;
     
-    public InlineKeyboardButton descriptionButton = new ("Описание");
-    public InlineKeyboardButton additionButton = new ("Дополнительно");
+    public InlineKeyboardButton descriptionButton = new ("About");
+    public InlineKeyboardButton additionButton = new ("Additional");
     
     // Keyboard markup
     private InlineKeyboardMarkup inline;
     
     async Task CallbackQueryHandlerAsync(CallbackQuery callbackQuery, CancellationToken cancellationToken) {
         if (callbackQuery.Data == "movie_description") {
-                await bot.EditMessageCaptionAsync(
+                await bot.EditMessageCaption(
                     callbackQuery.Message.Chat.Id,
                     callbackQuery.Message.MessageId,
                     DataBase.Instance.GetMovieMessageIdDictionary(callbackQuery.Message.MessageId),
@@ -33,7 +33,7 @@ public class TelegramProvider {
         }
 
         if (callbackQuery.Data == "movie_additional") {
-                await bot.EditMessageCaptionAsync(
+                await bot.EditMessageCaption(
                     callbackQuery.Message.Chat.Id,
                     callbackQuery.Message.MessageId,
                     DataBase.Instance.GetMovieMessageIdDictionaryAdditional(callbackQuery.Message.MessageId),
@@ -41,13 +41,16 @@ public class TelegramProvider {
                     replyMarkup: new InlineKeyboardMarkup(descriptionButton),
                     parseMode: ParseMode.Html);
         }
-        await bot.AnswerCallbackQueryAsync(
+        await bot.AnswerCallbackQuery(
                 callbackQuery.Id,
                 $"Computing...", cancellationToken: cancellationToken);
     }
 
     // Main Update handler
     async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken) {
+        if (update.Message.MessageThreadId != null) {
+            await bot.SendMessage(update.Message.Chat.Id, update.Message.MessageThreadId.ToString());
+        }
         if (update.Type == UpdateType.PollAnswer) {
             var win = update.PollAnswer.OptionIds.Aggregate((i1, i2) => i1 > i2 ? i1 : i2);
             if (update.PollAnswer.OptionIds is not null) {
@@ -58,6 +61,8 @@ public class TelegramProvider {
 
         if (update.CallbackQuery is { } callbackQuery) 
             await CallbackQueryHandlerAsync(callbackQuery, cancellationToken);
+
+        await bot.SendMessage(update.Message.Chat.Id, update.Message.Text);
         
         new AnswerFacade().SendAnswer(update);
     }
@@ -70,20 +75,20 @@ public class TelegramProvider {
             media.Add(new InputMediaPhoto(new InputFileUrl(path[i])));    
         }
         
-        await bot.SendMediaGroupAsync(
+        await bot.SendMediaGroup(
             chatId: chatId,
             media: media.ToArray(),
-            replyToMessageId: messageThreadId
+            messageThreadId: messageThreadId
         );
     }
     
     public async Task Init() {
         bot = new TelegramBotClient($"{Token}");
         
-        descriptionButton.Text = "Описание";
+        descriptionButton.Text = "Description";
         descriptionButton.CallbackData = "movie_description";
         
-        additionButton.Text = "Дополнительно";
+        additionButton.Text = "Additional";
         additionButton.CallbackData = "movie_additional";
         
         inline = new InlineKeyboardMarkup(new[] {
@@ -108,12 +113,12 @@ public class TelegramProvider {
             
             bot.StartReceiving(
                 updateHandler: HandleUpdateAsync,
-                pollingErrorHandler: HandlePollingErrorAsync,
+                errorHandler: HandlePollingErrorAsync,
                 receiverOptions: receiverOptions,
                 cancellationToken: cts.Token
             );
 
-            var me = await bot.GetMeAsync(cancellationToken: cts.Token);
+            var me = await bot.GetMe(cancellationToken: cts.Token);
             
             Console.WriteLine($"Start listening for @{me.Username}");
 

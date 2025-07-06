@@ -13,6 +13,7 @@
         "packagesPath": "/Users/aleksandrbaskin/.nuget/packages/",
         "outputPath": "/Users/aleksandrbaskin/Documents/GitHub/CinemaTelegramBot/App/obj/",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "/Users/aleksandrbaskin/.nuget/NuGet/NuGet.Config"
         ],
@@ -44,7 +45,7 @@
             },
             "OpenAI": {
               "target": "Package",
-              "version": "[2.1.0-beta.1, )"
+              "version": "[2.2.0-beta.4, )"
             },
             "RestSharp": {
               "target": "Package",
@@ -52,7 +53,7 @@
             },
             "Telegram.Bot": {
               "target": "Package",
-              "version": "[20.0.0-alpha.1, )"
+              "version": "[22.5.0-dev.24, )"
             },
             "VideoLibrary": {
               "target": "Package",
