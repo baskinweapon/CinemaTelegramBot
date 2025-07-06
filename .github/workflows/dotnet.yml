@@ -23,6 +23,9 @@ jobs:
         mkdir -p CinemaTelegramBot/App
         echo "${{ secrets.KEYS_CS }}" > CinemaTelegramBot/App/Keys.cs
 
+    - name: Посмотреть содержимое Keys.cs
+      run: cat CinemaTelegramBot/App/Keys.cs
+      
     - name: Restore dependencies
       run: dotnet restore
 
