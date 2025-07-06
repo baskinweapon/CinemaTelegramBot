@@ -97,7 +97,7 @@ class Aplication {
     // main
     public static async Task Main(String[] args) {
         // Mode.IsDev = true;
-        
+        Console.WriteLine("Starting application...");
         DataBase.Instance.Load();
         Update();
         
