@@ -17,15 +17,7 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-
-    - name: Восстановить Keys.cs из секрета
-      run: |
-        mkdir -p CinemaTelegramBot/App
-        echo "${{ secrets.KEYS_CS }}" > CinemaTelegramBot/App/TMDB/Keys.cs
-
-    - name: Посмотреть содержимое Keys.cs
-      run: cat CinemaTelegramBot/App/Keys.cs
-      
+    
     - name: Restore dependencies
       run: dotnet restore
 
