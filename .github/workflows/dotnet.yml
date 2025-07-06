@@ -20,8 +20,7 @@ jobs:
 
     - name: Восстановить Keys.cs из секрета
       run: |
-        mkdir -p MyProject
-        echo "${{ secrets.KEYS_CS }}" > MyProject/Keys.cs
+        echo "${{ secrets.KEYS_CS }}" > CinemaTelegramBot/App/Keys.cs
 
     - name: Restore dependencies
       run: dotnet restore
